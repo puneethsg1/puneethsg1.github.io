@@ -1,14 +1,271 @@
-<h1>Media Coverage</h1>
+<!DOCTYPE html>
+<html>
 
-<ul>
+<head>
 
-<li>U.S. News & World Report</li>
-<li>Daily Mail</li>
-<li>CBS Baltimore</li>
-<li>Healthline</li>
-<li>London Economic</li>
-<li>MedicalXpress</li>
-<li>HealthDay</li>
-<li>March of Dimes</li>
+<title>Media | Kathyayini Gopalakrishna</title>
 
-</ul>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+margin:0;
+background:#F6F8FB;
+color:#2D3748;
+line-height:1.7;
+}
+
+/* HERO */
+
+.hero-banner{
+background:linear-gradient(135deg,#FFD6E7,#FFC1DA,#FFB3D1);
+height:200px;
+}
+
+/* NAVBAR */
+
+header{
+background:white;
+padding:18px 60px;
+border-bottom:1px solid #E2E8F0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:#1E3A5F;
+margin-right:24px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+opacity:0.7;
+}
+
+/* SECTION */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:70px 30px;
+border-bottom:1px solid #E2E8F0;
+}
+
+.section-title{
+font-size:28px;
+margin-bottom:35px;
+color:#1E3A5F;
+}
+
+/* MEDIA GRID */
+
+.media-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.media-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+text-align:center;
+font-weight:500;
+color:#1E3A5F;
+}
+
+/* COMMENTARY SECTION */
+
+.commentary-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:22px;
+margin-top:10px;
+}
+
+.commentary-card{
+display:flex;
+gap:22px;
+align-items:center;
+background:white;
+padding:24px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+text-decoration:none;
+color:inherit;
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.commentary-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
+}
+
+.commentary-card:focus{
+outline:2px solid #2B6CB0;
+outline-offset:3px;
+}
+
+.commentary-icon{
+width:110px;
+height:110px;
+object-fit:contain;
+flex-shrink:0;
+border-radius:10px;
+background:#F8FAFC;
+padding:10px;
+}
+
+.commentary-title{
+font-size:20px;
+font-weight:600;
+color:#1E3A5F;
+margin-bottom:6px;
+}
+
+.commentary-author{
+font-size:15px;
+color:#4A5568;
+margin-bottom:4px;
+}
+
+.commentary-journal{
+font-size:15px;
+color:#2B6CB0;
+font-weight:500;
+}
+
+.commentary-hint{
+font-size:13px;
+color:#718096;
+margin-top:6px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+header{
+padding:15px 20px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.container{
+padding:40px 20px;
+}
+
+.section-title{
+font-size:22px;
+}
+
+.commentary-card{
+flex-direction:column;
+align-items:flex-start;
+text-align:left;
+}
+
+.commentary-icon{
+width:90px;
+height:90px;
+}
+
+.commentary-title{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="media.html">Media</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<div class="hero-banner"></div>
+
+<div class="container">
+
+<h1 class="section-title">Media Coverage</h1>
+
+<div class="media-grid">
+
+<div class="media-card">U.S. News & World Report</div>
+<div class="media-card">Daily Mail</div>
+<div class="media-card">CBS Baltimore</div>
+<div class="media-card">Healthline</div>
+<div class="media-card">London Economic</div>
+<div class="media-card">MedicalXpress</div>
+<div class="media-card">HealthDay</div>
+<div class="media-card">March of Dimes</div>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2 class="section-title">Featured Scientific Commentary</h2>
+
+<div class="commentary-grid">
+
+<a class="commentary-card" href="https://www.cell.com/immunity/fulltext/S1074-7613(19)30493-2" target="_blank">
+<img class="commentary-icon" src="immunity.png" alt="Immunity journal issue cover">
+<div>
+<div class="commentary-author">Relman DA.</div>
+<div class="commentary-title">Maternal IgA: Matchmaking in Early Childhood</div>
+<div class="commentary-journal">Immunity (2019)</div>
+<div class="commentary-hint">View commentary →</div>
+</div>
+</a>
+
+<a class="commentary-card" href="https://www.nature.com/articles/s41575-019-0182-4" target="_blank">
+<img class="commentary-icon" src="nrgastro.png" alt="Nature Reviews Gastroenterology & Hepatology journal issue cover">
+<div>
+<div class="commentary-author">Dickson I.</div>
+<div class="commentary-title">Maternal IgA is Necessary for Preventing Necrotizing Enterocolitis</div>
+<div class="commentary-journal">Nature Reviews Gastroenterology & Hepatology (2019)</div>
+<div class="commentary-hint">View commentary →</div>
+</div>
+</a>
+
+<a class="commentary-card" href="https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(19)30366-3" target="_blank">
+<img class="commentary-icon" src="cell_host_microbe.png" alt="Cell Host & Microbe journal issue cover">
+<div>
+<div class="commentary-author">Dunne-Castagna VP, Taft DH.</div>
+<div class="commentary-title">Mother’s Touch: Milk IgA and Protection from Necrotizing Enterocolitis</div>
+<div class="commentary-journal">Cell Host & Microbe (2019)</div>
+<div class="commentary-hint">View commentary →</div>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
