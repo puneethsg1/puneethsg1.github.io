@@ -64,15 +64,15 @@ border-bottom:1px solid #E2E8F0;
 
 .hero{
 display:grid;
-grid-template-columns:260px 1fr;
+grid-template-columns:360px 1fr;
 gap:60px;
 align-items:center;
 }
 
 .hero img{
 width:360px;
-border-radius:14px;
-box-shadow:0 12px 35px rgba(0,0,0,0.15);
+border-radius:16px;
+box-shadow:0 14px 40px rgba(0,0,0,0.18);
 }
 
 .hero h1{
@@ -206,7 +206,7 @@ gap:25px;
 }
 
 .hero img{
-width:160px;
+width:240px;
 margin:auto;
 }
 
@@ -257,7 +257,6 @@ width:fit-content;
 <header>
 
 <nav>
-
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="research.html">Research</a>
@@ -265,7 +264,6 @@ width:fit-content;
 <a href="media.html">Media</a>
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a>
-
 </nav>
 
 </header>
@@ -311,9 +309,7 @@ I study how maternal immunity, microbial genetics, and pediatric nutrition shape
 <h2 class="section-title">Research Keywords</h2>
 
 <p>
-
 Microbiology • Immunology • Host–Microbe Interaction • Neonatal Immunity • Microbiome Biology • Infectious Disease
-
 </p>
 
 </div>
@@ -350,107 +346,19 @@ Understanding microbial determinants of disease susceptibility in early life.
 
 </div>
 
-<!-- PUBLICATIONS -->
-
-<div class="container section">
-
-<h2 class="section-title">Selected Publications</h2>
-
-<div class="pub-card">
-
-<img class="pub-logo" src="nature.png">
-
-<div>
-
-<div class="pub-title">
-Maternal IgA protects against necrotizing enterocolitis
-</div>
-
-<div class="pub-journal">
-Nature Medicine
-</div>
-
-</div>
-
-</div>
-
-<div class="pub-card">
-
-<img class="pub-logo" src="communications_biology.png">
-
-<div>
-
-<div class="pub-title">
-Group B Streptococcus Cas9 variants reveal programmable gene repression
-</div>
-
-<div class="pub-journal">
-Communications Biology
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- MEDIA -->
-
-<div class="container section">
-
-<h2 class="section-title">Featured In</h2>
-
-<div class="media-grid">
-
-<img src="usnews.png">
-
-<img src="cbs.png">
-
-<img src="healthline.png">
-
-<img src="medicalxpress.png">
-
-</div>
-
-</div>
-
-<!-- CONTACT -->
-
-<div class="container section">
-
-<h2 class="section-title">Contact</h2>
-
-<p>
-
-Kathyayini Gopalakrishna  
-Project Scientist  
-University of California Riverside
-
-</p>
-
-<p>Email: kathyg@ucr.edu</p>
-
-</div>
-
-<footer>
-
-© Kathyayini Gopalakrishna • University of California Riverside
-
-</footer>
-
 <script>
 
 const sections = document.querySelectorAll(".section");
 
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add("visible");
 }
 });
 });
 
-sections.forEach(section => {
+sections.forEach(section=>{
 observer.observe(section);
 });
 
