@@ -48,6 +48,7 @@ width:360px;
 border-radius:16px;
 box-shadow:0 16px 45px rgba(0,0,0,0.25);
 border:6px solid white;
+object-fit:cover;
 }
 
 /* NAVBAR */
@@ -162,19 +163,42 @@ box-shadow:0 4px 12px rgba(0,0,0,0.05);
 display:flex;
 gap:15px;
 align-items:center;
+text-decoration:none;
+color:inherit;
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+cursor:pointer;
+}
+
+.pub-card:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.pub-card:focus{
+outline:2px solid #2B6CB0;
+outline-offset:3px;
 }
 
 .pub-logo{
 width:50px;
+flex-shrink:0;
 }
 
 .pub-title{
 font-weight:600;
+color:#1E3A5F;
+margin-bottom:4px;
 }
 
 .pub-journal{
 color:#2B6CB0;
 font-size:14px;
+}
+
+.pub-link-hint{
+font-size:13px;
+color:#718096;
+margin-top:4px;
 }
 
 /* MEDIA */
@@ -242,6 +266,10 @@ width:80px;
 margin:auto;
 }
 
+.pub-card{
+align-items:flex-start;
+}
+
 }
 
 </style>
@@ -276,7 +304,7 @@ margin:auto;
 
 <div class="profile-card">
 
-<img src="profile.jpg" class="profile-photo">
+<img src="profile.jpg" class="profile-photo" alt="Kathyayini Gopalakrishna">
 
 <div>
 
@@ -369,38 +397,32 @@ Understanding microbial determinants of disease susceptibility in early life.
 
 <h2 class="section-title">Selected Publications</h2>
 
-<div class="pub-card">
-
-<img class="pub-logo" src="nature.png">
-
+<a class="pub-card" href="https://www.nature.com/articles/s41591-019-0480-9" target="_blank" rel="noopener noreferrer">
+<img class="pub-logo" src="nature.png" alt="Nature Medicine logo">
 <div>
 <div class="pub-title">Maternal IgA protects against necrotizing enterocolitis</div>
 <div class="pub-journal">Nature Medicine</div>
+<div class="pub-link-hint">View article →</div>
 </div>
+</a>
 
-</div>
-
-<div class="pub-card">
-
-<img class="pub-logo" src="jem.png">
-
+<a class="pub-card" href="https://rupress.org/jem/article/220/8/e20220839/214243/Stability-and-heterogeneity-in-the-antimicrobiota" target="_blank" rel="noopener noreferrer">
+<img class="pub-logo" src="jem.png" alt="Journal of Experimental Medicine logo">
 <div>
 <div class="pub-title">Stability and heterogeneity in antimicrobiota reactivity of human milk IgA</div>
 <div class="pub-journal">Journal of Experimental Medicine</div>
+<div class="pub-link-hint">View article →</div>
 </div>
+</a>
 
-</div>
-
-<div class="pub-card">
-
-<img class="pub-logo" src="communications_biology.png">
-
+<a class="pub-card" href="https://www.nature.com/articles/s42003-023-04994-w" target="_blank" rel="noopener noreferrer">
+<img class="pub-logo" src="communications_biology.png" alt="Communications Biology logo">
 <div>
 <div class="pub-title">Group B Streptococcus Cas9 variants reveal programmable gene repression</div>
 <div class="pub-journal">Communications Biology</div>
+<div class="pub-link-hint">View article →</div>
 </div>
-
-</div>
+</a>
 
 </div>
 
