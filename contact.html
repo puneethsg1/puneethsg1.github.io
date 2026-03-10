@@ -1,6 +1,4 @@
-from pathlib import Path
-
-html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Kathyayini Gopalakrishna - Contact</title>
@@ -203,7 +201,7 @@ font-size:24px;
 
 <div class="quote-block">
 <blockquote>
-“A mother is the first architect of the infant microbiome — nurturing not only a child, but an invisible ecosystem that teaches the immune system how to live with the microbial world.”
+“A mother’s arms are made of tenderness, and in her gaze a baby first discovers the meaning of love.”
 </blockquote>
 <div class="quote-author">A quiet truth of motherhood</div>
 </div>
@@ -244,10 +242,9 @@ Every question begins a conversation, and every conversation has the potential t
 </div>
 </div>
 
+<footer style="text-align:center;padding:30px 10px;color:#718096;font-size:14px;border-top:1px solid #E2E8F0;margin-top:40px;">
+© Kathyayini Gopalakrishna
+</footer>
+
 </body>
 </html>
-"""
-
-path = Path("/mnt/data/contact.html")
-path.write_text(html, encoding="utf-8")
-print(f"Saved to {path}")
