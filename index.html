@@ -17,11 +17,14 @@ color:#2D3748;
 line-height:1.7;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 header{
 background:#1E3A5F;
 padding:18px 60px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
@@ -87,7 +90,7 @@ transition:0.2s;
 background:#1E4E8C;
 }
 
-/* SECTIONS */
+/* SECTION TITLES */
 
 .section-title{
 font-size:28px;
@@ -95,7 +98,7 @@ margin-bottom:20px;
 color:#1E3A5F;
 }
 
-/* GRID CARDS */
+/* GRID */
 
 .grid{
 display:grid;
@@ -103,11 +106,18 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
+/* CARDS */
+
 .card{
 background:white;
 padding:25px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
 }
 
 /* PUBLICATIONS */
@@ -157,13 +167,13 @@ color:#555;
 
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <div class="container">
 
 <div class="hero">
 
-<img src="profile.jpg" alt="Kathyayini Gopalakrishna">
+<img src="profile.jpg">
 
 <div>
 
@@ -198,6 +208,19 @@ Publications
 
 </div>
 
+<!-- QUICK LINKS -->
+
+<div class="container">
+
+<h2 class="section-title">Quick Links</h2>
+
+<a class="button" href="research.html">Research</a>
+<a class="button" href="publications.html">Publications</a>
+<a class="button" href="cv.pdf">Download CV</a>
+<a class="button" href="contact.html">Contact</a>
+
+</div>
+
 <!-- RESEARCH PROGRAM -->
 
 <div class="container">
@@ -209,6 +232,38 @@ Publications
 Maternal Immunity → Microbial Genetics → Host Immune Responses → Disease Protection
 
 </p>
+
+</div>
+
+<!-- RESEARCH FRAMEWORK -->
+
+<div class="container">
+
+<h2 class="section-title">Research Framework</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Maternal Immunity</h3>
+Maternal antibodies regulate microbial colonization and immune development during early life.
+</div>
+
+<div class="card">
+<h3>Microbial Genetics</h3>
+Functional genomics identifies microbial genes controlling colonization and virulence.
+</div>
+
+<div class="card">
+<h3>Host Immune Responses</h3>
+Immune signaling pathways regulate host–microbe interactions at mucosal surfaces.
+</div>
+
+<div class="card">
+<h3>Disease Protection</h3>
+Understanding these mechanisms guides strategies to prevent neonatal infectious disease.
+</div>
+
+</div>
 
 </div>
 
@@ -224,7 +279,7 @@ Maternal Immunity → Microbial Genetics → Host Immune Responses → Disease P
 
 <h3>Maternal Immunity and Neonatal Microbiome</h3>
 
-Maternal IgA antibodies in breast milk regulate microbial colonization and protect preterm infants from necrotizing enterocolitis.
+Maternal IgA antibodies regulate microbial colonization and protect preterm infants from necrotizing enterocolitis.
 
 </div>
 
@@ -232,7 +287,7 @@ Maternal IgA antibodies in breast milk regulate microbial colonization and prote
 
 <h3>Microbial Pathogenesis</h3>
 
-CRISPR‑based functional genomics reveals bacterial genes that regulate colonization, immune signaling, and virulence.
+CRISPR‑based functional genomics identifies bacterial genes controlling colonization and virulence.
 
 </div>
 
@@ -240,7 +295,7 @@ CRISPR‑based functional genomics reveals bacterial genes that regulate coloniz
 
 <h3>Microbiome–Immune Interactions</h3>
 
-Microbial communities influence immune signaling pathways and inflammatory responses during early life.
+Microbial communities influence immune signaling pathways during early life.
 
 </div>
 
@@ -259,7 +314,7 @@ Microbial communities influence immune signaling pathways and inflammatory respo
 <p>
 
 <b>PhD — University of Pittsburgh</b><br>
-Maternal IgA antibodies shape neonatal microbiota and protect preterm infants from necrotizing enterocolitis.
+Maternal IgA antibodies shape neonatal microbiota and protect preterm infants.
 
 </p>
 
@@ -285,7 +340,7 @@ Quantitative metagenomics identifying microbial signatures of neonatal disease.
 
 <div class="container">
 
-<h2 class="section-title">Featured Publications</h2>
+<h2 class="section-title">Selected Publications</h2>
 
 <div class="publication">
 
@@ -316,11 +371,16 @@ Journal of Experimental Medicine
 
 <h2 class="section-title">Media Coverage</h2>
 
-<p>
+<div class="grid">
 
-U.S. News & World Report • Daily Mail • CBS Baltimore • Healthline • MedicalXpress • HealthDay • March of Dimes
+<div class="card">U.S. News & World Report</div>
+<div class="card">CBS Baltimore</div>
+<div class="card">Healthline</div>
+<div class="card">MedicalXpress</div>
+<div class="card">HealthDay</div>
+<div class="card">March of Dimes</div>
 
-</p>
+</div>
 
 </div>
 
