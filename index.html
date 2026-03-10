@@ -120,6 +120,37 @@ border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
+/* TRAINING */
+
+.training-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:30px;
+align-items:center;
+text-align:center;
+}
+
+.training-card{
+background:white;
+padding:25px 20px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.training-card img{
+max-width:140px;
+height:auto;
+margin-bottom:12px;
+opacity:0.95;
+}
+
+.training-card p{
+margin:0;
+font-size:15px;
+font-weight:500;
+color:#1E3A5F;
+}
+
 /* PUBLICATIONS */
 
 .pub-card{
@@ -195,6 +226,10 @@ font-size:22px;
 }
 
 .research-grid{
+grid-template-columns:1fr;
+}
+
+.training-grid{
 grid-template-columns:1fr;
 }
 
@@ -301,6 +336,33 @@ Understanding microbial determinants of disease susceptibility in early life.
 
 </div>
 
+<!-- TRAINING -->
+
+<div class="container">
+
+<h2 class="section-title">Training</h2>
+
+<div class="training-grid">
+
+<div class="training-card">
+<img src="caltech.png" alt="Caltech logo">
+<p>California Institute of Technology</p>
+</div>
+
+<div class="training-card">
+<img src="pitt.png" alt="University of Pittsburgh logo">
+<p>University of Pittsburgh</p>
+</div>
+
+<div class="training-card">
+<img src="ucr.png" alt="UC Riverside logo">
+<p>University of California, Riverside</p>
+</div>
+
+</div>
+
+</div>
+
 <!-- PUBLICATIONS -->
 
 <div class="container">
@@ -339,10 +401,10 @@ Understanding microbial determinants of disease susceptibility in early life.
 
 <div class="media-grid">
 
-<img src="usnews.png">
-<img src="cbs.png">
-<img src="healthline.png">
-<img src="medicalxpress.png">
+<img src="usnews.png" alt="US News logo">
+<img src="cbs.png" alt="CBS logo">
+<img src="healthline.png" alt="Healthline logo">
+<img src="medicalxpress.png" alt="Medical Xpress logo">
 
 </div>
 
