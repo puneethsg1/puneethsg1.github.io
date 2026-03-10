@@ -43,29 +43,79 @@ opacity:0.7;
 
 .hero-banner{
 background:linear-gradient(135deg,#FFD6E7,#FFC1DA,#FFB3D1);
-height:180px;
+height:240px;
 }
 
-/* LAYOUT */
+/* OVERLAP SECTION */
 
-.intro-section{
+.profile-section{
 max-width:1100px;
 margin:auto;
-padding:60px 30px 20px 30px;
+padding:0 30px;
+position:relative;
 }
+
+.profile-card{
+background:white;
+border-radius:16px;
+box-shadow:0 16px 45px rgba(0,0,0,0.12);
+padding:36px 40px;
+margin-top:-110px;
+display:grid;
+grid-template-columns:1.05fr 0.95fr;
+gap:30px;
+align-items:center;
+}
+
+.page-kicker{
+font-size:13px;
+font-weight:700;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:#2B6CB0;
+margin-bottom:10px;
+}
+
+.page-title{
+font-size:40px;
+line-height:1.15;
+margin:0 0 14px 0;
+color:#1E3A5F;
+}
+
+.lead-text{
+font-size:18px;
+margin:0 0 14px 0;
+}
+
+.intro-text{
+margin:0;
+color:#4A5568;
+}
+
+/* SCHEMATIC */
+
+.schematic-panel{
+background:#F8FAFC;
+border:1px solid #E2E8F0;
+border-radius:16px;
+padding:18px 18px 12px 18px;
+}
+
+.schematic-title{
+font-size:15px;
+font-weight:700;
+color:#1E3A5F;
+margin-bottom:10px;
+}
+
+/* GENERAL LAYOUT */
 
 .container{
 max-width:1100px;
 margin:auto;
 padding:64px 30px;
 border-bottom:1px solid #E2E8F0;
-}
-
-.page-title{
-font-size:40px;
-line-height:1.2;
-margin:0 0 14px 0;
-color:#1E3A5F;
 }
 
 .section-title{
@@ -81,151 +131,7 @@ margin:0 0 28px 0;
 color:#4A5568;
 }
 
-/* INTRO */
-
-.highlight-box{
-background:white;
-padding:34px;
-border-radius:14px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
-border-left:6px solid #2B6CB0;
-}
-
-.lead-text{
-font-size:18px;
-max-width:960px;
-margin:0 0 14px 0;
-}
-
-.intro-text{
-margin:0;
-max-width:960px;
-color:#4A5568;
-}
-
-.focus-row{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:14px;
-margin-top:24px;
-}
-
-.focus-pill{
-background:#F7FAFC;
-border:1px solid #E2E8F0;
-border-radius:10px;
-padding:14px 16px;
-text-align:center;
-font-size:14px;
-font-weight:600;
-color:#1E3A5F;
-}
-
-/* RESEARCH GRID */
-
-.research-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:22px;
-}
-
-.research-card{
-background:white;
-padding:26px;
-border-radius:12px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
-transition:transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.research-card:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 24px rgba(0,0,0,0.08);
-}
-
-.card-top{
-display:flex;
-align-items:center;
-gap:14px;
-margin-bottom:14px;
-}
-
-.card-icon{
-width:42px;
-height:42px;
-border-radius:50%;
-background:#EBF4FF;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#2B6CB0;
-flex-shrink:0;
-}
-
-.card-label{
-font-size:12px;
-font-weight:700;
-letter-spacing:0.08em;
-text-transform:uppercase;
-color:#2B6CB0;
-margin-bottom:3px;
-}
-
-.research-card h3{
-margin:0;
-font-size:20px;
-line-height:1.35;
-color:#1E3A5F;
-}
-
-.research-card p{
-margin:0;
-color:#4A5568;
-}
-
-/* FEATURE PANELS */
-
-.feature-card{
-background:white;
-padding:32px;
-border-radius:12px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
-}
-
-.vision-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:18px;
-margin-top:24px;
-}
-
-.vision-item{
-background:#F7FAFC;
-border:1px solid #E2E8F0;
-border-radius:12px;
-padding:18px;
-}
-
-.vision-item h4{
-margin:0 0 8px 0;
-font-size:17px;
-color:#1E3A5F;
-}
-
-.vision-item p{
-margin:0;
-color:#4A5568;
-}
-
-.lab-banner{
-margin-top:22px;
-background:linear-gradient(135deg,#EFF6FF,#F8FBFF);
-border:1px solid #D6E4F0;
-border-radius:12px;
-padding:20px 22px;
-color:#2D3748;
-}
-
-/* QUICK READ STRIP */
+/* AT A GLANCE */
 
 .quick-read{
 display:grid;
@@ -252,6 +158,90 @@ font-size:15px;
 color:#4A5568;
 }
 
+/* RESEARCH GRID */
+
+.research-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:22px;
+}
+
+.research-card{
+background:white;
+padding:26px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
+}
+
+.card-label{
+font-size:12px;
+font-weight:700;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:#2B6CB0;
+margin-bottom:6px;
+}
+
+.research-card h3{
+margin:0 0 8px 0;
+font-size:20px;
+line-height:1.35;
+color:#1E3A5F;
+}
+
+.research-card p{
+margin:0;
+color:#4A5568;
+}
+
+/* FEATURE */
+
+.feature-card{
+background:white;
+padding:32px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.vision-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:18px;
+margin-top:20px;
+}
+
+.vision-item{
+background:#F7FAFC;
+border:1px solid #E2E8F0;
+border-radius:12px;
+padding:18px;
+}
+
+.vision-item h4{
+margin:0 0 8px 0;
+font-size:17px;
+color:#1E3A5F;
+}
+
+.vision-item p{
+margin:0;
+color:#4A5568;
+}
+
+.lab-banner{
+margin-top:18px;
+background:#F0F7FF;
+border:1px solid #D6E4F0;
+border-radius:12px;
+padding:18px;
+}
+
 /* MOBILE */
 
 @media (max-width:768px){
@@ -266,8 +256,18 @@ flex-wrap:wrap;
 gap:10px;
 }
 
-.intro-section{
-padding:40px 20px 10px 20px;
+.hero-banner{
+height:180px;
+}
+
+.profile-section{
+padding:0 20px;
+}
+
+.profile-card{
+grid-template-columns:1fr;
+margin-top:-80px;
+padding:26px 22px;
 }
 
 .container{
@@ -278,23 +278,15 @@ padding:42px 20px;
 font-size:30px;
 }
 
-.section-title{
-font-size:22px;
-}
-
 .research-grid{
 grid-template-columns:1fr;
 }
 
-.focus-row{
-grid-template-columns:1fr 1fr;
-}
-
-.vision-grid{
+.quick-read{
 grid-template-columns:1fr;
 }
 
-.quick-read{
+.vision-grid{
 grid-template-columns:1fr;
 }
 
@@ -322,11 +314,16 @@ grid-template-columns:1fr;
 
 <div class="hero-banner"></div>
 
-<div class="intro-section">
+<div class="profile-section">
 
-<h1 class="page-title">Research</h1>
+<div class="profile-card">
 
-<div class="highlight-box">
+<div>
+
+<div class="page-kicker">Research Program</div>
+
+<h1 class="page-title">Host–Microbe Interactions in Early Life</h1>
+
 <p class="lead-text">
 My research focuses on understanding molecular and immunological mechanisms governing host–microbe interactions during early life.
 </p>
@@ -335,12 +332,141 @@ My research focuses on understanding molecular and immunological mechanisms gove
 I study how maternal immunity, microbial genetics, microbiome dynamics, and pediatric nutrition shape immune development and susceptibility to infection in neonates and young infants.
 </p>
 
-<div class="focus-row">
-<div class="focus-pill">Maternal Immunity</div>
-<div class="focus-pill">Microbial Genetics</div>
-<div class="focus-pill">Microbiome–Immune Interactions</div>
-<div class="focus-pill">Nutrition and Early-Life Health</div>
 </div>
+
+<div class="schematic-panel">
+
+<div class="schematic-title">Conceptual Framework</div>
+
+<svg viewBox="0 0 640 360" width="100%" height="360" aria-label="Graphical abstract of host-microbe interactions in early life">
+
+  <defs>
+    <linearGradient id="gradImmunity" x1="0" x2="1">
+      <stop offset="0%" stop-color="#E8F0FF"/>
+      <stop offset="100%" stop-color="#D8E7FF"/>
+    </linearGradient>
+
+    <linearGradient id="gradNutrition" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FFF3E6"/>
+      <stop offset="100%" stop-color="#FFE6C7"/>
+    </linearGradient>
+
+    <linearGradient id="gradMicrobiome" x1="0" x2="1">
+      <stop offset="0%" stop-color="#E7FBF5"/>
+      <stop offset="100%" stop-color="#CFF3E8"/>
+    </linearGradient>
+
+    <linearGradient id="gradGenomics" x1="0" x2="1">
+      <stop offset="0%" stop-color="#F0ECFF"/>
+      <stop offset="100%" stop-color="#E2DAFF"/>
+    </linearGradient>
+
+    <linearGradient id="gradDisease" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FFECEE"/>
+      <stop offset="100%" stop-color="#FFDADF"/>
+    </linearGradient>
+
+    <linearGradient id="gradCenter" x1="0" x2="1">
+      <stop offset="0%" stop-color="#F7FAFC"/>
+      <stop offset="100%" stop-color="#EDF2F7"/>
+    </linearGradient>
+
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#6B7280"></polygon>
+    </marker>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#94A3B8" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Connecting curves -->
+  <path d="M170 85 C240 110, 250 130, 280 155" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+  <path d="M170 280 C240 255, 250 235, 280 210" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+  <path d="M365 180 C430 180, 445 105, 500 90" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+  <path d="M365 180 C430 180, 445 180, 500 180" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+  <path d="M365 180 C430 180, 445 255, 500 270" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+
+  <!-- Top left: Maternal immunity -->
+  <g filter="url(#softShadow)">
+    <rect x="35" y="45" rx="18" ry="18" width="145" height="78" fill="url(#gradImmunity)" stroke="#C7D7F7"/>
+    <circle cx="68" cy="84" r="16" fill="#2B6CB0" opacity="0.12"/>
+    <path d="M68 71 L74 84 L68 97 L62 84 Z" fill="none" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="95" y="78" font-size="14" font-weight="700" fill="#1E3A5F">Maternal Immunity</text>
+    <text x="95" y="97" font-size="12.5" fill="#425466">Antibodies and</text>
+    <text x="95" y="113" font-size="12.5" fill="#425466">immune transfer</text>
+  </g>
+
+  <!-- Bottom left: Nutrition -->
+  <g filter="url(#softShadow)">
+    <rect x="35" y="240" rx="18" ry="18" width="145" height="78" fill="url(#gradNutrition)" stroke="#F2D0A7"/>
+    <circle cx="68" cy="279" r="16" fill="#DD6B20" opacity="0.12"/>
+    <path d="M64 287 C64 277, 72 277, 72 268 C78 272, 79 282, 73 288 C70 291, 66 291, 64 287 Z" fill="none" stroke="#C05621" stroke-width="2"/>
+    <text x="95" y="272" font-size="14" font-weight="700" fill="#8A3B12">Nutrition</text>
+    <text x="95" y="291" font-size="12.5" fill="#7B4A2F">Diet and early-life</text>
+    <text x="95" y="307" font-size="12.5" fill="#7B4A2F">metabolic signals</text>
+  </g>
+
+  <!-- Center hub -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="320" cy="182" rx="92" ry="72" fill="url(#gradCenter)" stroke="#D6E4F0" stroke-width="1.5"/>
+    <circle cx="320" cy="155" r="16" fill="#FFD6E7" stroke="#E8AFC4"/>
+    <path d="M320 171 L320 208" stroke="#A0AEC0" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M301 193 C310 185, 330 185, 339 193" fill="none" stroke="#A0AEC0" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M307 214 C312 205, 328 205, 333 214" fill="none" stroke="#A0AEC0" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="320" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Early-Life Host</text>
+    <text x="320" y="257" text-anchor="middle" font-size="12.5" fill="#4A5568">Mucosal immunity and</text>
+    <text x="320" y="273" text-anchor="middle" font-size="12.5" fill="#4A5568">developmental susceptibility</text>
+  </g>
+
+  <!-- Top right: Microbiome -->
+  <g filter="url(#softShadow)">
+    <rect x="500" y="48" rx="18" ry="18" width="110" height="78" fill="url(#gradMicrobiome)" stroke="#B8E7D6"/>
+    <circle cx="528" cy="87" r="4.5" fill="#059669"/>
+    <circle cx="541" cy="75" r="4" fill="#10B981"/>
+    <circle cx="544" cy="95" r="3.8" fill="#34D399"/>
+    <circle cx="556" cy="84" r="4.8" fill="#047857"/>
+    <circle cx="567" cy="95" r="3.8" fill="#10B981"/>
+    <text x="556" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#065F46">Microbiome</text>
+    <text x="556" y="112" text-anchor="middle" font-size="12.5" fill="#426B5E">Colonization and ecology</text>
+  </g>
+
+  <!-- Middle right: Immune development -->
+  <g filter="url(#softShadow)">
+    <rect x="500" y="140" rx="18" ry="18" width="110" height="78" fill="#EFF6FF" stroke="#CFE0F6"/>
+    <circle cx="530" cy="180" r="16" fill="#2B6CB0" opacity="0.10"/>
+    <path d="M522 180 L528 186 L539 172" fill="none" stroke="#2B6CB0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="556" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Immune</text>
+    <text x="556" y="191" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Development</text>
+    <text x="556" y="211" text-anchor="middle" font-size="12.5" fill="#4A5568">Barrier and signaling</text>
+  </g>
+
+  <!-- Bottom right: Disease risk -->
+  <g filter="url(#softShadow)">
+    <rect x="500" y="232" rx="18" ry="18" width="110" height="78" fill="url(#gradDisease)" stroke="#F4C7D0"/>
+    <circle cx="528" cy="271" r="16" fill="#C53030" opacity="0.10"/>
+    <path d="M523 266 L533 276 M533 266 L523 276" stroke="#C53030" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="556" y="267" text-anchor="middle" font-size="14" font-weight="700" fill="#9B2C2C">Infection Risk</text>
+    <text x="556" y="298" text-anchor="middle" font-size="12.5" fill="#7A4049">Neonatal susceptibility</text>
+  </g>
+
+  <!-- Small genomics inset -->
+  <g filter="url(#softShadow)">
+    <rect x="255" y="20" rx="14" ry="14" width="130" height="56" fill="url(#gradGenomics)" stroke="#D8D0F8"/>
+    <path d="M282 34 C288 28, 295 28, 301 34 C307 40, 314 40, 320 34" fill="none" stroke="#6B46C1" stroke-width="2"/>
+    <path d="M282 62 C288 56, 295 56, 301 62 C307 68, 314 68, 320 62" fill="none" stroke="#6B46C1" stroke-width="2"/>
+    <path d="M282 34 L282 62 M320 34 L320 62" stroke="#6B46C1" stroke-width="2"/>
+    <text x="344" y="42" font-size="13.5" font-weight="700" fill="#553C9A">Functional</text>
+    <text x="344" y="59" font-size="13.5" font-weight="700" fill="#553C9A">Genomics</text>
+  </g>
+
+  <!-- Link genomics to center -->
+  <path d="M320 76 C320 92, 320 102, 320 109" fill="none" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+</svg>
+
+</div>
+
 </div>
 
 </div>
@@ -350,6 +476,7 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
 <h2 class="section-title">At a Glance</h2>
 
 <div class="quick-read">
+
 <div class="quick-read-box">
 <h3>Biological Focus</h3>
 <p>Host–microbe interactions at mucosal surfaces during early life.</p>
@@ -357,13 +484,14 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
 
 <div class="quick-read-box">
 <h3>Systems Studied</h3>
-<p>Maternal immunity, neonatal microbiome, bacterial pathogenesis, and nutrition.</p>
+<p>Maternal immunity, neonatal microbiome, microbial genetics, and nutrition.</p>
 </div>
 
 <div class="quick-read-box">
 <h3>Translational Goal</h3>
-<p>Prevent neonatal and pediatric infectious disease through mechanism-based interventions.</p>
+<p>Prevent neonatal infectious disease through mechanism-based interventions.</p>
 </div>
+
 </div>
 
 </div>
@@ -379,115 +507,48 @@ My work integrates immunology, microbiology, genetics, and nutrition to define m
 <div class="research-grid">
 
 <div class="research-card">
-<div class="card-top">
-<div class="card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
-</svg>
-</div>
-<div>
 <div class="card-label">Immunity</div>
 <h3>Maternal Immunity and Neonatal Microbiome</h3>
-</div>
-</div>
 <p>
 Investigating how maternal antibodies regulate microbial colonization, mucosal immunity, and immune development during early life.
 </p>
 </div>
 
 <div class="research-card">
-<div class="card-top">
-<div class="card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<circle cx="8" cy="8" r="3"/>
-<circle cx="16" cy="16" r="3"/>
-<path d="M10.5 10.5l3 3"/>
-<path d="M14 8h5"/>
-<path d="M5 16h5"/>
-</svg>
-</div>
-<div>
 <div class="card-label">Pathogenesis</div>
 <h3>Microbial Determinants of Pathogenesis</h3>
-</div>
-</div>
 <p>
 Identifying microbial genes and pathways that control colonization, virulence, persistence, and immune modulation in the developing host.
 </p>
 </div>
 
 <div class="research-card">
-<div class="card-top">
-<div class="card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M4 12c2.5-4 5.5-6 8-6s5.5 2 8 6c-2.5 4-5.5 6-8 6s-5.5-2-8-6z"/>
-<circle cx="12" cy="12" r="2.5"/>
-</svg>
-</div>
-<div>
 <div class="card-label">Host Response</div>
 <h3>Microbiome–Immune Interactions</h3>
-</div>
-</div>
 <p>
 Studying how microbial communities influence immune signaling pathways, barrier function, and host defense mechanisms at mucosal surfaces.
 </p>
 </div>
 
 <div class="research-card">
-<div class="card-top">
-<div class="card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M7 4c2.5 0 3 2 5 2s2.5-2 5-2"/>
-<path d="M7 20c2.5 0 3-2 5-2s2.5 2 5 2"/>
-<path d="M8 5v14"/>
-<path d="M16 5v14"/>
-<path d="M8 8c2 0 2.5 1.5 4 1.5S14 8 16 8"/>
-<path d="M8 16c2 0 2.5-1.5 4-1.5S14 16 16 16"/>
-</svg>
-</div>
-<div>
 <div class="card-label">Genomics</div>
 <h3>Functional Genomics of Microbial Virulence</h3>
-</div>
-</div>
 <p>
 Using CRISPR-based and genetic approaches to identify bacterial genes involved in colonization, pathogenesis, and host adaptation.
 </p>
 </div>
 
 <div class="research-card">
-<div class="card-top">
-<div class="card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M12 3c3 3 5 5.5 5 9a5 5 0 1 1-10 0c0-3.5 2-6 5-9z"/>
-<path d="M9 14c1 .8 2 .8 3 .8s2 0 3-.8"/>
-</svg>
-</div>
-<div>
 <div class="card-label">Nutrition</div>
 <h3>Nutrition, Microbiome, and Early-Life Disease</h3>
-</div>
-</div>
 <p>
 Examining how pediatric nutrition and diet-associated microbial changes influence immune development, microbial ecology, and susceptibility to neonatal infectious disease.
 </p>
 </div>
 
 <div class="research-card">
-<div class="card-top">
-<div class="card-icon">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-<path d="M6 19c6-1 10-5 11-11"/>
-<path d="M14 5h5v5"/>
-<path d="M5 13c1.5.2 2.8 1.5 3 3"/>
-</svg>
-</div>
-<div>
 <div class="card-label">Translation</div>
 <h3>Prevention of Neonatal Infection</h3>
-</div>
-</div>
 <p>
 Integrating immunology, microbiology, genetics, and nutrition to identify preventive strategies that improve outcomes in vulnerable infants.
 </p>
@@ -502,11 +563,13 @@ Integrating immunology, microbiology, genetics, and nutrition to identify preven
 <h2 class="section-title">Research Vision</h2>
 
 <div class="feature-card">
+
 <p class="section-subtitle">
 My long-term goal is to establish an interdisciplinary research program that defines molecular mechanisms governing host–microbe interactions and translates these discoveries into strategies for preventing infectious diseases during early life.
 </p>
 
 <div class="vision-grid">
+
 <div class="vision-item">
 <h4>Define Mechanisms</h4>
 <p>
@@ -527,7 +590,9 @@ Determine how nutritional exposures influence the microbiome, immune maturation,
 Develop mechanistic foundations for vaccines, microbiome-based therapeutics, and preventive strategies for neonatal and pediatric infections.
 </p>
 </div>
+
 </div>
+
 </div>
 
 </div>
@@ -537,15 +602,17 @@ Develop mechanistic foundations for vaccines, microbiome-based therapeutics, and
 <h2 class="section-title">Future Lab</h2>
 
 <div class="feature-card">
-<h3 style="margin-top:0; color:#1E3A5F;">The Gopalakrishna Laboratory</h3>
 
-<p class="section-subtitle" style="margin-bottom:0;">
+<h3 style="margin-top:0;color:#1E3A5F;">The Gopalakrishna Laboratory</h3>
+
+<p>
 The Gopalakrishna laboratory will study how microbes interact with the immune system at mucosal surfaces and how these interactions influence susceptibility to infection during early life.
 </p>
 
 <div class="lab-banner">
 The lab will integrate microbiology, immunology, genetics, nutrition, and translational approaches to define disease mechanisms and identify preventive interventions for neonatal and pediatric infectious diseases.
 </div>
+
 </div>
 
 </div>
