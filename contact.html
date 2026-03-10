@@ -1,9 +1,253 @@
-<h1>Contact</h1>
+from pathlib import Path
 
-<p>
-Kathyayini Gopalakrishna  
-Project Scientist  
-University of California Riverside
+html = """<!DOCTYPE html>
+<html>
+<head>
+<title>Kathyayini Gopalakrishna - Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+margin:0;
+background:#F6F8FB;
+color:#2D3748;
+line-height:1.7;
+}
+
+header{
+background:white;
+padding:18px 60px;
+border-bottom:1px solid #E2E8F0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:#1E3A5F;
+margin-right:24px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+opacity:0.7;
+}
+
+.hero-banner{
+background:linear-gradient(135deg,#FFD6E7,#FFC1DA,#FFB3D1);
+height:220px;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 30px 70px;
+}
+
+.contact-card{
+background:white;
+border-radius:18px;
+box-shadow:0 16px 45px rgba(0,0,0,0.12);
+overflow:hidden;
+margin-top:-110px;
+}
+
+.contact-image{
+width:100%;
+height:520px;
+object-fit:cover;
+display:block;
+}
+
+.quote-block{
+padding:28px 40px 10px;
+text-align:center;
+background:linear-gradient(180deg,#FFF8FB 0%,#FFFFFF 100%);
+}
+
+.quote-block blockquote{
+margin:0;
+font-size:26px;
+line-height:1.5;
+color:#1E3A5F;
+font-weight:600;
+}
+
+.quote-author{
+margin-top:10px;
+font-size:14px;
+color:#718096;
+letter-spacing:0.04em;
+text-transform:uppercase;
+}
+
+.contact-content{
+padding:40px;
+display:grid;
+grid-template-columns:1.2fr 0.8fr;
+gap:40px;
+}
+
+.section-title{
+font-size:30px;
+margin:0 0 18px;
+color:#1E3A5F;
+}
+
+.contact-intro{
+font-size:17px;
+margin-bottom:20px;
+}
+
+.info-card{
+background:#F8FAFC;
+padding:24px;
+border-radius:14px;
+border:1px solid #E2E8F0;
+margin-bottom:16px;
+}
+
+.info-label{
+font-size:13px;
+font-weight:700;
+letter-spacing:0.05em;
+text-transform:uppercase;
+color:#718096;
+margin-bottom:6px;
+}
+
+.info-text{
+font-size:18px;
+color:#1E3A5F;
+}
+
+.info-text a{
+color:#2B6CB0;
+text-decoration:none;
+word-break:break-word;
+}
+
+.info-text a:hover{
+text-decoration:underline;
+}
+
+.note-box{
+background:#FFF5F7;
+border-left:4px solid #FFB3D1;
+padding:18px 20px;
+border-radius:10px;
+}
+
+@media (max-width:768px){
+header{
+padding:15px 20px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.container{
+padding:0 20px 40px;
+}
+
+.contact-card{
+margin-top:-90px;
+}
+
+.contact-image{
+height:320px;
+}
+
+.quote-block{
+padding:22px 20px 8px;
+}
+
+.quote-block blockquote{
+font-size:20px;
+}
+
+.contact-content{
+grid-template-columns:1fr;
+padding:28px 20px;
+gap:24px;
+}
+
+.section-title{
+font-size:24px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="media.html">Media</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="hero-banner"></div>
+
+<div class="container">
+<div class="contact-card">
+<img src="happy.png" class="contact-image" alt="Mother holding a baby at sunset">
+
+<div class="quote-block">
+<blockquote>
+“A mother’s arms are made of tenderness, and in her gaze a baby first discovers the meaning of love.”
+</blockquote>
+<div class="quote-author">A quiet truth of motherhood</div>
+</div>
+
+<div class="contact-content">
+<div>
+<h1 class="section-title">Contact</h1>
+<p class="contact-intro">
+Thank you for visiting. For academic inquiries, collaborations, research discussions, or professional correspondence, please use the contact details below.
 </p>
+<div class="note-box">
+Every question begins a conversation, and every conversation has the potential to open a new path in science, mentorship, and service.
+</div>
+</div>
 
-<p>Email: kathyg@ucr.edu</p>
+<div>
+<div class="info-card">
+<div class="info-label">Name</div>
+<div class="info-text">Kathy Gopalakrishna</div>
+</div>
+
+<div class="info-card">
+<div class="info-label">Position</div>
+<div class="info-text">Project Scientist</div>
+</div>
+
+<div class="info-card">
+<div class="info-label">Institution</div>
+<div class="info-text">University of California Riverside</div>
+</div>
+
+<div class="info-card">
+<div class="info-label">Email</div>
+<div class="info-text"><a href="mailto:kathyg@ucr.edu">kathyg@ucr.edu</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+"""
+
+path = Path("/mnt/data/contact.html")
+path.write_text(html, encoding="utf-8")
+print(f"Saved to {path}")
