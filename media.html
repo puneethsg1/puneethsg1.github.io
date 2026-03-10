@@ -61,29 +61,10 @@ margin-bottom:35px;
 color:#1E3A5F;
 }
 
-/* MEDIA GRID */
-
-.media-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.media-card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
-text-align:center;
-font-weight:500;
-color:#1E3A5F;
-}
-
 /* COMMENTARY */
 
 .commentary-grid{
 display:grid;
-grid-template-columns:1fr;
 gap:22px;
 }
 
@@ -109,7 +90,6 @@ box-shadow:0 10px 24px rgba(0,0,0,0.08);
 width:110px;
 height:110px;
 object-fit:contain;
-flex-shrink:0;
 border-radius:10px;
 background:#F8FAFC;
 padding:10px;
@@ -134,10 +114,38 @@ color:#2B6CB0;
 font-weight:500;
 }
 
-.commentary-hint{
-font-size:13px;
-color:#718096;
-margin-top:6px;
+/* MEDIA ARTICLES */
+
+.media-list{
+display:grid;
+gap:18px;
+}
+
+.media-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+text-decoration:none;
+color:inherit;
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-card:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
+}
+
+.media-title{
+font-size:18px;
+font-weight:600;
+color:#1E3A5F;
+margin-bottom:4px;
+}
+
+.media-source{
+font-size:14px;
+color:#2B6CB0;
 }
 
 /* MOBILE */
@@ -197,32 +205,11 @@ height:90px;
 
 <div class="hero-banner"></div>
 
-<!-- MEDIA COVERAGE -->
+<!-- FEATURED COMMENTARY -->
 
 <div class="container">
 
-<h1 class="section-title">Media Coverage</h1>
-
-<div class="media-grid">
-
-<div class="media-card">U.S. News & World Report</div>
-<div class="media-card">Daily Mail</div>
-<div class="media-card">CBS Baltimore</div>
-<div class="media-card">Healthline</div>
-<div class="media-card">London Economic</div>
-<div class="media-card">MedicalXpress</div>
-<div class="media-card">HealthDay</div>
-<div class="media-card">March of Dimes</div>
-
-</div>
-
-</div>
-
-<!-- SCIENTIFIC COMMENTARY -->
-
-<div class="container">
-
-<h2 class="section-title">Featured Scientific Commentary</h2>
+<h1 class="section-title">Featured Scientific Commentary</h1>
 
 <div class="commentary-grid">
 
@@ -232,7 +219,6 @@ height:90px;
 <div class="commentary-author">Relman DA.</div>
 <div class="commentary-title">Maternal IgA: Matchmaking in Early Childhood</div>
 <div class="commentary-journal">Immunity — August 2019 (Vol 51, Issue 2)</div>
-<div class="commentary-hint">View article →</div>
 </div>
 </a>
 
@@ -242,7 +228,6 @@ height:90px;
 <div class="commentary-author">Dickson I.</div>
 <div class="commentary-title">Maternal IgA is Necessary for Preventing Necrotizing Enterocolitis</div>
 <div class="commentary-journal">Nature Reviews Gastroenterology & Hepatology — August 2019</div>
-<div class="commentary-hint">View article →</div>
 </div>
 </a>
 
@@ -252,8 +237,59 @@ height:90px;
 <div class="commentary-author">Dunne-Castagna VP, Taft DH.</div>
 <div class="commentary-title">Mother’s Touch: Milk IgA and Protection from Necrotizing Enterocolitis</div>
 <div class="commentary-journal">Cell Host & Microbe — August 2019 (Vol 26, Issue 2)</div>
-<div class="commentary-hint">View article →</div>
 </div>
+</a>
+
+</div>
+
+</div>
+
+<!-- MEDIA COVERAGE -->
+
+<div class="container">
+
+<h2 class="section-title">Media Coverage</h2>
+
+<div class="media-list">
+
+<a class="media-card" href="https://www.usnews.com/news/health-news/articles/2019-06-17/another-reason-breast-is-best-for-fragile-preemie-babies" target="_blank">
+<div class="media-title">Another Reason Breast Is Best for Fragile Preemie Babies</div>
+<div class="media-source">U.S. News & World Report</div>
+</a>
+
+<a class="media-card" href="https://www.dailymail.co.uk/health/article-7150907/Mothers-milk-protects-premature-babies-deadly-infection.html" target="_blank">
+<div class="media-title">Mother's Milk Protects Premature Babies Against Deadly Infection</div>
+<div class="media-source">Daily Mail</div>
+</a>
+
+<a class="media-card" href="https://www.cbsnews.com/baltimore/news/healthwatch-breast-milk-helps-preterm-babies-fight-deadly-intestinal-disease/" target="_blank">
+<div class="media-title">Breast Milk Helps Preterm Babies Fight Deadly Intestinal Disease</div>
+<div class="media-source">CBS Baltimore</div>
+</a>
+
+<a class="media-card" href="https://www.healthline.com/health-news/breast-milk-can-protect-preterm-infants-from-dangerous-gut-bacteria" target="_blank">
+<div class="media-title">Breast Milk Can Protect Preterm Infants from Dangerous Gut Bacteria</div>
+<div class="media-source">Healthline</div>
+</a>
+
+<a class="media-card" href="https://www.thelondoneconomic.com/lifestyle/breastfeeding-protects-premature-babies-from-deadly-disease-135965/" target="_blank">
+<div class="media-title">Breastfeeding Protects Premature Babies from Deadly Disease</div>
+<div class="media-source">The London Economic</div>
+</a>
+
+<a class="media-card" href="https://medicalxpress.com/news/2019-06-breastmilk-antibody-preterm-infants-deadly.html" target="_blank">
+<div class="media-title">Breastmilk Antibody Protects Preterm Infants from Deadly Intestinal Disease</div>
+<div class="media-source">MedicalXpress</div>
+</a>
+
+<a class="media-card" href="https://consumer.healthday.com/another-reason-breast-is-best-for-fragile-preemie-babies-2641231513.html" target="_blank">
+<div class="media-title">Another Reason Breast Is Best for Fragile Preemie Babies</div>
+<div class="media-source">HealthDay</div>
+</a>
+
+<a class="media-card" href="https://www.marchofdimes.org/our-work/research/blog/breastmilk-antibody-protects-preterm-babies-deadly-intestinal-disease" target="_blank">
+<div class="media-title">Breastmilk Antibody Can Protect Preterm Babies from Deadly Intestinal Disease</div>
+<div class="media-source">March of Dimes</div>
 </a>
 
 </div>
