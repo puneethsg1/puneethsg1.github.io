@@ -49,26 +49,21 @@ padding:70px 30px;
 /* HERO */
 
 .hero{
-display:flex;
+display:grid;
+grid-template-columns:260px 1fr;
 gap:60px;
 align-items:center;
-flex-wrap:wrap;
 }
 
 .hero img{
 width:240px;
 border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
+box-shadow:0 12px 35px rgba(0,0,0,0.15);
 }
 
 .hero h1{
-margin-bottom:5px;
+margin-bottom:6px;
 color:#1E3A5F;
-}
-
-.subtitle{
-color:#666;
-margin-top:0;
 }
 
 /* BUTTONS */
@@ -94,21 +89,19 @@ background:#1E4E8C;
 
 .section-title{
 font-size:28px;
-margin-bottom:20px;
+margin-bottom:25px;
 color:#1E3A5F;
 }
 
-/* GRID */
+/* RESEARCH AREAS */
 
-.grid{
+.research-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
 
-/* CARDS */
-
-.card{
+.research-card{
 background:white;
 padding:25px;
 border-radius:10px;
@@ -116,8 +109,8 @@ box-shadow:0 6px 18px rgba(0,0,0,0.05);
 transition:0.2s;
 }
 
-.card:hover{
-transform:translateY(-4px);
+.research-card:hover{
+transform:translateY(-5px);
 }
 
 /* PUBLICATIONS */
@@ -125,18 +118,28 @@ transform:translateY(-4px);
 .pub-card{
 background:white;
 padding:20px;
-border-radius:8px;
+border-radius:10px;
 margin-bottom:15px;
 box-shadow:0 4px 12px rgba(0,0,0,0.05);
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.pub-logo{
+width:40px;
+}
+
+.pub-title{
+font-weight:600;
 }
 
 .pub-journal{
 color:#2B6CB0;
-font-weight:600;
 font-size:14px;
 }
 
-/* MEDIA LOGOS */
+/* MEDIA */
 
 .media-grid{
 display:grid;
@@ -145,12 +148,9 @@ gap:20px;
 text-align:center;
 }
 
-.media-logo{
-background:white;
-padding:15px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
-font-size:14px;
+.media-grid img{
+width:100px;
+opacity:0.85;
 }
 
 /* FOOTER */
@@ -176,7 +176,6 @@ color:#555;
 <a href="about.html">About</a>
 <a href="research.html">Research</a>
 <a href="publications.html">Publications</a>
-<a href="teaching.html">Teaching</a>
 <a href="media.html">Media</a>
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a>
@@ -184,8 +183,6 @@ color:#555;
 </nav>
 
 </header>
-
-<!-- HERO -->
 
 <div class="container">
 
@@ -197,8 +194,8 @@ color:#555;
 
 <h1>Kathyayini Gopalakrishna, PhD, MBBS</h1>
 
-<p class="subtitle">
-Microbiology • Immunology • Genetics • Nutrition • Neonatology • Public Health • Life Sciences
+<p>
+Microbiology • Immunology • Genetics • Nutrition • Neonatology • Public Health
 </p>
 
 <p>
@@ -207,14 +204,11 @@ University of California, Riverside
 </p>
 
 <p>
-I study how maternal immunity, pediatric nutrition, and microbial genetics interact to shape host–microbe interactions and infectious disease susceptibility during early life.
+I study how maternal immunity, microbial genetics, and pediatric nutrition shape host–microbe interactions and infectious disease susceptibility during early life.
 </p>
 
 <a class="button" href="cv.pdf">Download CV</a>
-
-<a class="button" href="publications.html">
-Publications
-</a>
+<a class="button" href="publications.html">Publications</a>
 
 </div>
 
@@ -222,32 +216,32 @@ Publications
 
 </div>
 
-<!-- RESEARCH FRAMEWORK -->
+<!-- RESEARCH AREAS -->
 
 <div class="container">
 
-<h2 class="section-title">Research Framework</h2>
+<h2 class="section-title">Research Areas</h2>
 
-<div class="grid">
+<div class="research-grid">
 
-<div class="card">
+<div class="research-card">
 <h3>Maternal Immunity</h3>
-Maternal antibodies regulate microbial colonization and immune development during early life.
+Maternal antibodies regulate microbial colonization and neonatal immune development.
 </div>
 
-<div class="card">
+<div class="research-card">
 <h3>Microbial Genetics</h3>
-Functional genomics identifies microbial genes controlling colonization and virulence.
+Functional genomics identifies genes controlling colonization and virulence.
 </div>
 
-<div class="card">
-<h3>Host Immune Responses</h3>
-Immune signaling pathways regulate host–microbe interactions.
+<div class="research-card">
+<h3>Host–Microbe Interaction</h3>
+Immune signaling pathways govern microbial tolerance and defense.
 </div>
 
-<div class="card">
-<h3>Disease Prevention</h3>
-Understanding these mechanisms guides strategies to prevent neonatal infectious diseases.
+<div class="research-card">
+<h3>Neonatal Infectious Disease</h3>
+Understanding microbial determinants of disease susceptibility in early life.
 </div>
 
 </div>
@@ -262,25 +256,37 @@ Understanding these mechanisms guides strategies to prevent neonatal infectious 
 
 <div class="pub-card">
 
-<b>Maternal IgA protects against the development of necrotizing enterocolitis in preterm infants</b>
+<img class="pub-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Nature_journal_logo.svg">
 
-<div class="pub-journal">Nature Medicine</div>
+<div>
+
+<div class="pub-title">
+Maternal IgA protects against necrotizing enterocolitis
+</div>
+
+<div class="pub-journal">
+Nature Medicine
+</div>
+
+</div>
 
 </div>
 
 <div class="pub-card">
 
-<b>Group B Streptococcus Cas9 variants provide insight into programmable gene repression</b>
+<img class="pub-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Nature_Communications_Logo.svg">
 
-<div class="pub-journal">Communications Biology</div>
+<div>
 
+<div class="pub-title">
+Group B Streptococcus Cas9 variants reveal programmable gene repression
 </div>
 
-<div class="pub-card">
+<div class="pub-journal">
+Communications Biology
+</div>
 
-<b>Stability and heterogeneity in antimicrobiota reactivity of human milk IgA</b>
-
-<div class="pub-journal">Journal of Experimental Medicine</div>
+</div>
 
 </div>
 
@@ -294,12 +300,13 @@ Understanding these mechanisms guides strategies to prevent neonatal infectious 
 
 <div class="media-grid">
 
-<div class="media-logo">U.S. News</div>
-<div class="media-logo">CBS Baltimore</div>
-<div class="media-logo">Healthline</div>
-<div class="media-logo">MedicalXpress</div>
-<div class="media-logo">HealthDay</div>
-<div class="media-logo">March of Dimes</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/36/US_News_%26_World_Report_logo.svg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/CBS_logo.svg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Healthline_logo.svg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Medical_Xpress_logo.svg">
 
 </div>
 
@@ -313,9 +320,9 @@ Understanding these mechanisms guides strategies to prevent neonatal infectious 
 
 <p>
 
-Kathyayini Gopalakrishna<br>
-Project Scientist<br>
-University of California, Riverside
+Kathyayini Gopalakrishna  
+Project Scientist  
+University of California Riverside
 
 </p>
 
