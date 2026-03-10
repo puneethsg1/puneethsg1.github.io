@@ -111,11 +111,11 @@
       font-weight:500;
     }
 
-    .region-block{
+    .country-block{
       margin-top:42px;
     }
 
-    .region-title{
+    .country-title{
       font-size:22px;
       color:#1E3A5F;
       margin-bottom:18px;
@@ -129,7 +129,8 @@
       gap:18px;
     }
 
-    .media-card{
+    .media-card,
+    .media-card-static{
       display:block;
       background:white;
       padding:20px;
@@ -145,6 +146,11 @@
       transform:translateY(-3px);
       box-shadow:0 10px 24px rgba(0,0,0,0.08);
       border-color:#E2E8F0;
+    }
+
+    .media-card-static{
+      border:1px dashed #D6DEE8;
+      background:#FCFDFF;
     }
 
     .media-title{
@@ -258,16 +264,46 @@
 <!-- MEDIA COVERAGE -->
 <div class="container">
   <h2 class="section-title">Media Coverage</h2>
-  <div class="section-subtitle">Selected international coverage grouped by region.</div>
+  <div class="section-subtitle">Grouped by country of origin.</div>
 
-  <!-- NORTH AMERICA -->
-  <div class="region-block">
-    <h3 class="region-title">North America</h3>
+  <!-- UNITED STATES -->
+  <div class="country-block">
+    <h3 class="country-title">United States</h3>
     <div class="media-list">
+
+      <a class="media-card" href="https://www.usnews.com/news/health-news/articles/2019-06-17/another-reason-breast-is-best-for-fragile-preemie-babies" target="_blank" rel="noopener">
+        <div class="media-title">Another Reason Breast Is Best for Fragile Preemie Babies</div>
+        <div class="media-source">U.S. News &amp; World Report</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.cbsnews.com/baltimore/news/healthwatch-breast-milk-helps-preterm-babies-fight-deadly-intestinal-disease/" target="_blank" rel="noopener">
+        <div class="media-title">HealthWatch: Breast Milk Helps Preterm Babies Fight Deadly Intestinal Disease</div>
+        <div class="media-source">CBS Baltimore</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.healthline.com/health-news/breast-milk-can-protect-preterm-infants-from-dangerous-gut-bacteria" target="_blank" rel="noopener">
+        <div class="media-title">Breast Milk Can Protect Preterm Infants from Dangerous Gut Bacteria</div>
+        <div class="media-source">Healthline</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.genengnews.com/topics/omics/breastmilks-iga-protects-premature-babies-from-deadly-disease/" target="_blank" rel="noopener">
+        <div class="media-title">Breastmilk’s IgA Protects Preemies From Deadly Disease</div>
+        <div class="media-source">Genetic Engineering &amp; Biotechnology News</div>
+        <div class="media-link">View article</div>
+      </a>
 
       <a class="media-card" href="https://www.healthday.com/mens-health" target="_blank" rel="noopener">
         <div class="media-title">Another Reason Breast Is Best for Fragile Preemie Babies</div>
         <div class="media-source">HealthDay</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.marchofdimes.org/our-work/research/blog/breastmilk-antibody-protects-preterm-babies-deadly-intestinal-disease" target="_blank" rel="noopener">
+        <div class="media-title">Breastmilk Antibody can Protect Preterm Babies from Deadly Intestinal Disease</div>
+        <div class="media-source">March of Dimes</div>
         <div class="media-link">View article</div>
       </a>
 
@@ -277,15 +313,15 @@
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://www.medindia.net/news/breast-milk-antibody-saves-preterm-infants-from-intestinal-disease-188389-1.htm" target="_blank" rel="noopener">
-        <div class="media-title">Breast Milk Antibody Saves Preterm Infants from Intestinal Disease</div>
-        <div class="media-source">MedIndia</div>
-        <div class="media-link">View article</div>
-      </a>
-
       <a class="media-card" href="https://vivemichigan.com/otro-motivo-de-que-la-leche-materna-sea-lo-mejor-para-los-fragiles-bebes-prematuros/" target="_blank" rel="noopener">
         <div class="media-title">Otro motivo de que la leche materna sea lo mejor para los frágiles bebés prematuros</div>
         <div class="media-source">Vive Michigan</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.upmc.com/media/news/061719-hand-iga-breastmilk" target="_blank" rel="noopener">
+        <div class="media-title">Breastmilk Antibody Protects Infants from Deadly Disease</div>
+        <div class="media-source">UPMC News</div>
         <div class="media-link">View article</div>
       </a>
 
@@ -298,16 +334,44 @@
     </div>
   </div>
 
-  <!-- EUROPE -->
-  <div class="region-block">
-    <h3 class="region-title">Europe</h3>
+  <!-- UNITED KINGDOM -->
+  <div class="country-block">
+    <h3 class="country-title">United Kingdom</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://www.dailymail.co.uk/health/article-7150907/Mothers-milk-protects-premature-babies-deadly-infection.html" target="_blank" rel="noopener">
+        <div class="media-title">Mother's Milk Protects Premature Babies Against Deadly Infection - But Only if it Contains a Special Antibody, Study Finds</div>
+        <div class="media-source">Daily Mail</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.thelondoneconomic.com/lifestyle/breastfeeding-protects-premature-babies-from-deadly-disease-135965/" target="_blank" rel="noopener">
+        <div class="media-title">Breastfeeding ‘protects premature babies from deadly disease’</div>
+        <div class="media-source">The London Economic</div>
+        <div class="media-link">View article</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- SWITZERLAND -->
+  <div class="country-block">
+    <h3 class="country-title">Switzerland</h3>
     <div class="media-list">
 
       <a class="media-card" href="https://www.nzz.ch/wissenschaft/nekrotisierende-enterokolitis-antikoerper-in-muttermilch-schuetzen-ld.1490086" target="_blank" rel="noopener">
-        <div class="media-title">Natürlicher Schutz vor gefürchtetem Darm-Notfall</div>
+        <div class="media-title">Natürlicher Schutz vor Gefürchtetem Darm-Notfall</div>
         <div class="media-source">Neue Zürcher Zeitung</div>
         <div class="media-link">View article</div>
       </a>
+
+    </div>
+  </div>
+
+  <!-- ITALY -->
+  <div class="country-block">
+    <h3 class="country-title">Italy</h3>
+    <div class="media-list">
 
       <a class="media-card" href="https://www.nostrofiglio.it/neonato/0-3-mesi/anticorpi-iga-protegge-prematuri" target="_blank" rel="noopener">
         <div class="media-title">Gli Anticorpi del Latte Materno che Proteggono i Bimbi Prematuri</div>
@@ -315,15 +379,23 @@
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://www.abc.es/salud/enfermedades/abci-leche-materna-protege-bebes-prematuros-enfermedad-intestinal-mortal-201906181127_noticia.html?ref=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener">
-        <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
-        <div class="media-source">ABC</div>
+      <a class="media-card" href="https://www.healthdesk.it/prevenzione/anticorpi-latte-materno-proteggono-neonati-infezioni-intestinali" target="_blank" rel="noopener">
+        <div class="media-title">Gli anticorpi del latte materno proteggono i neonati dalle infezioni intestinali</div>
+        <div class="media-source">Healthdesk</div>
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://www.gutmicrobiotaforhealth.com/an-increase-in-enterobacteriaceae-not-bound-to-iga-drives-the-reduced-intestinal-bacterial-diversity-that-precedes-necrotizing-enterocolitis-in-preterm-infants/" target="_blank" rel="noopener">
-        <div class="media-title">An increase in Enterobacteriaceae not bound to IgA drives the reduced intestinal bacterial diversity that precedes necrotizing enterocolitis in preterm infants</div>
-        <div class="media-source">Gut Microbiota for Health</div>
+    </div>
+  </div>
+
+  <!-- SPAIN -->
+  <div class="country-block">
+    <h3 class="country-title">Spain</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://www.abc.es/salud/enfermedades/abci-leche-materna-protege-bebes-prematuros-enfermedad-intestinal-mortal-201906181127_noticia.html?ref=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener">
+        <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
+        <div class="media-source">ABC</div>
         <div class="media-link">View article</div>
       </a>
 
@@ -333,27 +405,23 @@
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://biermann-medizin.de/antikoerper-in-muttermilch-schuetzen-fruehgeborene-vor-toedlicher-darmerkrankung/" target="_blank" rel="noopener">
-        <div class="media-title">Antikörper in Muttermilch schützen Frühgeborene vor tödlicher Darmerkrankung</div>
-        <div class="media-source">Biermann Medizin</div>
-        <div class="media-link">View article</div>
-      </a>
-
       <a class="media-card" href="http://lamejornoticia.net/la-leche-materna-protege-a-los-bebes-prematuros-de-una-enfermedad-intestinal-mortal/" target="_blank" rel="noopener">
         <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
         <div class="media-source">La Mejor Noticia</div>
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://bioemfoco.com.br/noticia/leite-materno-proteger-prematuros-bacteria-intestino/" target="_blank" rel="noopener">
-        <div class="media-title">Leite materno pode proteger prematuros de bactéria perigosa do intestino</div>
-        <div class="media-source">Bio em Foco</div>
-        <div class="media-link">View article</div>
-      </a>
+    </div>
+  </div>
 
-      <a class="media-card" href="https://www.healthdesk.it/prevenzione/anticorpi-latte-materno-proteggono-neonati-infezioni-intestinali" target="_blank" rel="noopener">
-        <div class="media-title">Gli anticorpi del latte materno proteggono i neonati dalle infezioni intestinali</div>
-        <div class="media-source">HealthDesk</div>
+  <!-- GERMANY -->
+  <div class="country-block">
+    <h3 class="country-title">Germany</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://biermann-medizin.de/antikoerper-in-muttermilch-schuetzen-fruehgeborene-vor-toedlicher-darmerkrankung/" target="_blank" rel="noopener">
+        <div class="media-title">Antikörper in Muttermilch schützen Frühgeborene vor tödlicher Darmerkrankung</div>
+        <div class="media-source">Biermann-Medizin</div>
         <div class="media-link">View article</div>
       </a>
 
@@ -372,9 +440,57 @@
     </div>
   </div>
 
-  <!-- ASIA -->
-  <div class="region-block">
-    <h3 class="region-title">Asia</h3>
+  <!-- INDIA -->
+  <div class="country-block">
+    <h3 class="country-title">India</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://www.medindia.net/news/breast-milk-antibody-saves-preterm-infants-from-intestinal-disease-188389-1.htm" target="_blank" rel="noopener">
+        <div class="media-title">Breast Milk Antibody Saves Preterm Infants from Intestinal Disease</div>
+        <div class="media-source">MedIndia</div>
+        <div class="media-link">View article</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- BRAZIL -->
+  <div class="country-block">
+    <h3 class="country-title">Brazil</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://bioemfoco.com.br/noticia/leite-materno-proteger-prematuros-bacteria-intestino/" target="_blank" rel="noopener">
+        <div class="media-title">Leite materno pode proteger prematuros de bactéria perigosa do intestino</div>
+        <div class="media-source">Bioemfoco</div>
+        <div class="media-link">View article</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- INDONESIA -->
+  <div class="country-block">
+    <h3 class="country-title">Indonesia</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://klikdokter.com/info-sehat/read/3630956/asi-melindungi-bayi-prematur-dari-bakteri-usus-berbahaya" target="_blank" rel="noopener">
+        <div class="media-title">ASI Melindungi Bayi Prematur dari Bakteri Usus Berbahaya</div>
+        <div class="media-source">KlikDokter</div>
+        <div class="media-link">View article</div>
+      </a>
+
+      <a class="media-card" href="https://www.ungu.me/2019/06/asi-dapat-melindungi-bayi-prematur-dari.html" target="_blank" rel="noopener">
+        <div class="media-title">ASI Dapat Melindungi Bayi Prematur Dari Bakteri Usus Berbahaya</div>
+        <div class="media-source">Ungu</div>
+        <div class="media-link">View article</div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- CHINA -->
+  <div class="country-block">
+    <h3 class="country-title">China</h3>
     <div class="media-list">
 
       <a class="media-card" href="https://news.bioon.com/article/6740601.html" target="_blank" rel="noopener">
@@ -437,15 +553,23 @@
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://klikdokter.com/info-sehat/read/3630956/asi-melindungi-bayi-prematur-dari-bakteri-usus-berbahaya" target="_blank" rel="noopener">
-        <div class="media-title">ASI Melindungi Bayi Prematur dari Bakteri Usus Berbahaya</div>
-        <div class="media-source">KlikDokter</div>
-        <div class="media-link">View article</div>
-      </a>
+      <div class="media-card-static">
+        <div class="media-title">母乳IgA可预防早产儿坏死性小肠结肠炎的发生</div>
+        <div class="media-source">Ccaiye</div>
+        <div class="media-link">Link not provided</div>
+      </div>
 
-      <a class="media-card" href="https://www.ungu.me/2019/06/asi-dapat-melindungi-bayi-prematur-dari.html" target="_blank" rel="noopener">
-        <div class="media-title">ASI Dapat Melindungi Bayi Prematur Dari Bakteri Usus Berbahaya</div>
-        <div class="media-source">Ungu</div>
+    </div>
+  </div>
+
+  <!-- INTERNATIONAL / MULTINATIONAL -->
+  <div class="country-block">
+    <h3 class="country-title">International / Multinational</h3>
+    <div class="media-list">
+
+      <a class="media-card" href="https://www.gutmicrobiotaforhealth.com/an-increase-in-enterobacteriaceae-not-bound-to-iga-drives-the-reduced-intestinal-bacterial-diversity-that-precedes-necrotizing-enterocolitis-in-preterm-infants/" target="_blank" rel="noopener">
+        <div class="media-title">An increase in Enterobacteriaceae not bound to IgA drives the reduced intestinal bacterial diversity that precedes necrotizing enterocolitis in preterm infants</div>
+        <div class="media-source">Gut Microbiota for Health</div>
         <div class="media-link">View article</div>
       </a>
 
