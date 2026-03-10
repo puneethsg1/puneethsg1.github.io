@@ -12,28 +12,38 @@
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
 margin:0;
-background:#f5f7fb;
-color:#333;
+background:#F6F8FB;
+color:#2D3748;
 line-height:1.7;
 }
 
+/* NAVIGATION */
+
 header{
-background:#1f2a44;
-padding:20px 60px;
+background:#1E3A5F;
+padding:18px 60px;
 }
 
 nav a{
 color:white;
-margin-right:25px;
+margin-right:24px;
 text-decoration:none;
 font-weight:500;
 }
 
+nav a:hover{
+opacity:0.8;
+}
+
+/* LAYOUT */
+
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 30px;
+padding:70px 30px;
 }
+
+/* HERO */
 
 .hero{
 display:flex;
@@ -45,25 +55,47 @@ flex-wrap:wrap;
 .hero img{
 width:240px;
 border-radius:14px;
-box-shadow:0 8px 30px rgba(0,0,0,0.15);
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
+
+.hero h1{
+margin-bottom:5px;
+color:#1E3A5F;
+}
+
+.subtitle{
+color:#666;
+margin-top:0;
+}
+
+/* BUTTONS */
 
 .button{
 display:inline-block;
 margin-right:10px;
-margin-top:10px;
-padding:10px 18px;
-background:#2b6cb0;
+margin-top:12px;
+padding:10px 20px;
+background:#2B6CB0;
 color:white;
 border-radius:6px;
 text-decoration:none;
 font-size:14px;
+transition:0.2s;
 }
+
+.button:hover{
+background:#1E4E8C;
+}
+
+/* SECTIONS */
 
 .section-title{
 font-size:28px;
 margin-bottom:20px;
+color:#1E3A5F;
 }
+
+/* GRID CARDS */
 
 .grid{
 display:grid;
@@ -75,24 +107,31 @@ gap:25px;
 background:white;
 padding:25px;
 border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
+/* PUBLICATIONS */
+
 .publication{
-border-left:4px solid #2b6cb0;
+border-left:4px solid #2B6CB0;
 padding-left:15px;
 margin-bottom:20px;
 }
 
+/* TIMELINE */
+
 .timeline{
-border-left:3px solid #2b6cb0;
+border-left:3px solid #2B6CB0;
 padding-left:20px;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:40px;
-color:#777;
+background:#EDF2F7;
+color:#555;
 }
 
 </style>
@@ -118,6 +157,8 @@ color:#777;
 
 </header>
 
+<!-- HERO SECTION -->
+
 <div class="container">
 
 <div class="hero">
@@ -126,46 +167,9 @@ color:#777;
 
 <div>
 
-<h1 style="margin-bottom:5px;">Kathyayini Gopalakrishna, PhD, MBBS</h1>
-
-<p style="margin-top:0;color:#666;">
-Microbiology • Immunology • Genetics • Nutrition • Neonatology • Public Health • Life Sciences
-</p>
-
-<p style="font-size:18px;">
-Project Scientist<br>
-University of California, Riverside
-</p>
-
-<p>
-I study how maternal immunity, pediatric nutrition, and microbial genetics interact to shape host–microbe interactions, microbial colonization, and infectious disease susceptibility during early life.
-</p>
-
-<div style="margin-top:15px;">
-
-<a class="button" href="cv.pdf">Download CV</a>
-
-<a class="button" href="https://scholar.google.com/citations?user=NXlf3MsAAAAJ">
-Google Scholar
-</a>
-
-<a class="button" href="publications.html">
-Publications
-</a>
-
-</div>
-
-</div>
-
-</div>
-  
-<img src="profile.jpg">
-
-<div>
-
 <h1>Kathyayini Gopalakrishna, PhD, MBBS</h1>
 
-<p>
+<p class="subtitle">
 Microbiology • Immunology • Genetics • Nutrition • Neonatology • Public Health • Life Sciences
 </p>
 
@@ -193,6 +197,8 @@ Publications
 </div>
 
 </div>
+
+<!-- RESEARCH PROGRAM -->
 
 <div class="container">
 
@@ -205,6 +211,8 @@ Maternal Immunity → Microbial Genetics → Host Immune Responses → Disease P
 </p>
 
 </div>
+
+<!-- RESEARCH HIGHLIGHTS -->
 
 <div class="container">
 
@@ -240,6 +248,8 @@ Microbial communities influence immune signaling pathways and inflammatory respo
 
 </div>
 
+<!-- SCIENTIFIC TRAJECTORY -->
+
 <div class="container">
 
 <h2 class="section-title">Scientific Trajectory</h2>
@@ -249,7 +259,7 @@ Microbial communities influence immune signaling pathways and inflammatory respo
 <p>
 
 <b>PhD — University of Pittsburgh</b><br>
-Maternal IgA antibodies shape neonatal microbiota and protect preterm infants.
+Maternal IgA antibodies shape neonatal microbiota and protect preterm infants from necrotizing enterocolitis.
 
 </p>
 
@@ -271,32 +281,36 @@ Quantitative metagenomics identifying microbial signatures of neonatal disease.
 
 </div>
 
+<!-- PUBLICATIONS -->
+
 <div class="container">
 
 <h2 class="section-title">Featured Publications</h2>
 
 <div class="publication">
 
-<b>Maternal IgA protects against necrotizing enterocolitis</b><br>
+<b>Maternal IgA protects against the development of necrotizing enterocolitis in preterm infants</b><br>
 Nature Medicine
 
 </div>
 
 <div class="publication">
 
-<b>Group B Streptococcus Cas9 variants</b><br>
+<b>Group B Streptococcus Cas9 variants provide insight into programmable gene repression</b><br>
 Communications Biology
 
 </div>
 
 <div class="publication">
 
-<b>Human milk IgA antimicrobiota reactivity</b><br>
+<b>Stability and heterogeneity in antimicrobiota reactivity of human milk IgA</b><br>
 Journal of Experimental Medicine
 
 </div>
 
 </div>
+
+<!-- MEDIA -->
 
 <div class="container">
 
@@ -304,11 +318,13 @@ Journal of Experimental Medicine
 
 <p>
 
-U.S. News & World Report • CBS Baltimore • Healthline • MedicalXpress • HealthDay • March of Dimes
+U.S. News & World Report • Daily Mail • CBS Baltimore • Healthline • MedicalXpress • HealthDay • March of Dimes
 
 </p>
 
 </div>
+
+<!-- CONTACT -->
 
 <div class="container">
 
