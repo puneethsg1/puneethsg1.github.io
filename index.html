@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Kathyayini Gopalakrishna</title>
 
 <style>
 
 body{
-font-family:-apple-system,Segoe UI,Roboto;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
 margin:0;
-background:#f5f7fb;
+background:#f4f6fb;
 color:#333;
+line-height:1.6;
 }
 
 header{
 background:#1f2a44;
 color:white;
-padding:20px 60px;
+padding:20px 50px;
 }
 
 nav a{
 color:white;
 margin-right:25px;
 text-decoration:none;
+font-weight:500;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 40px;
 }
 
 .hero{
 display:flex;
 gap:40px;
-padding:80px;
-background:white;
+align-items:center;
 }
 
-.section{
-max-width:1000px;
-margin:auto;
-padding:50px;
+.hero img{
+width:200px;
+border-radius:10px;
+}
+
+.section-title{
+font-size:28px;
+margin-bottom:20px;
 }
 
 .card{
 background:white;
 padding:25px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
 margin-bottom:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
 }
 
 </style>
@@ -69,7 +93,9 @@ margin-bottom:25px;
 
 </header>
 
-<section class="hero">
+<div class="container">
+
+<div class="hero">
 
 <div>
 
@@ -80,39 +106,43 @@ Microbiology • Immunology • Genetics • Nutrition • Neonatology • Publi
 </p>
 
 <p>
-Project Scientist  
+Project Scientist<br>
 University of California, Riverside
 </p>
 
 <p>
-I study how maternal immunity, pediatric nutrition, and microbial genetics interact to shape host–microbe interactions and infectious disease susceptibility during early life.
+I study how maternal immunity, pediatric nutrition, and microbial genetics interact to shape host–microbe interactions, microbial colonization, and infectious disease susceptibility during early life.
 </p>
 
 </div>
 
-</section>
+</div>
 
-<section class="section">
+</div>
 
-<h2>Research Mission</h2>
+<div class="container">
+
+<h2 class="section-title">Research Mission</h2>
 
 <p>
 My research investigates how maternal antibodies, microbial genetics, and host immune responses shape microbial colonization and infectious disease susceptibility during early life.
 </p>
 
 <p>
-The neonatal period represents a critical developmental window in which the microbiome and immune system establish interactions that influence both immediate and long‑term health outcomes.
+The neonatal period represents a critical developmental window in which the microbiome and immune system establish interactions influencing long‑term health outcomes.
 </p>
 
-</section>
+</div>
 
-<section class="section">
+<div class="container">
 
-<h2>Research Highlights</h2>
+<h2 class="section-title">Research Highlights</h2>
+
+<div class="grid">
 
 <div class="card">
 
-<h3>Maternal Immunity and Neonatal Microbiome</h3>
+<h3>Maternal Immunity</h3>
 
 Maternal IgA antibodies in breast milk regulate microbial colonization and protect preterm infants from necrotizing enterocolitis.
 
@@ -128,17 +158,19 @@ CRISPR‑based functional genomics reveals bacterial genes that regulate coloniz
 
 <div class="card">
 
-<h3>Microbiome–Immune Interactions</h3>
+<h3>Microbiome–Immune Interaction</h3>
 
 Microbial communities influence immune signaling pathways and inflammatory responses during early life.
 
 </div>
 
-</section>
+</div>
 
-<section class="section">
+</div>
 
-<h2>Featured Research</h2>
+<div class="container">
+
+<h2 class="section-title">Featured Research</h2>
 
 <div class="card">
 
@@ -148,8 +180,39 @@ Microbial communities influence immune signaling pathways and inflammatory respo
 
 </div>
 
-</section>
+</div>
+
+<div class="container">
+
+<h2 class="section-title">Media Coverage</h2>
+
+<p>
+U.S. News & World Report • CBS Baltimore • Healthline • MedicalXpress • HealthDay • March of Dimes
+</p>
+
+</div>
+
+<div class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<p>
+
+Kathyayini Gopalakrishna<br>
+Project Scientist<br>
+University of California, Riverside
+
+</p>
+
+<p>Email: kathyg@ucr.edu</p>
+
+</div>
+
+<footer>
+
+© Kathyayini Gopalakrishna
+
+</footer>
 
 </body>
 </html>
-
