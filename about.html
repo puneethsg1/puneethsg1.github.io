@@ -1,194 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Puneeth S.G.</title>
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #1e293b;
-      --muted: #475569;
-      --line: #e2e8f0;
-      --accent: #0f766e;
-      --accent-dark: #115e59;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-      --radius: 18px;
-      --maxw: 980px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Puneeth S.G.</title>
 
-    * {
-      box-sizing: border-box;
-    }
+<style>
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-    }
+:root {
+--bg:#f8fafc;
+--card:#ffffff;
+--text:#1e293b;
+--muted:#475569;
+--line:#e2e8f0;
+--accent:#0f766e;
+--shadow:0 10px 30px rgba(15,23,42,0.06);
+--radius:18px;
+--maxw:980px;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+*{
+box-sizing:border-box;
+}
 
-    .container {
-      width: min(var(--maxw), calc(100% - 2rem));
-      margin: 0 auto;
-    }
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.75;
+}
 
-    .site-nav {
-      background: #ffffffcc;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+.container{
+width:min(var(--maxw),calc(100% - 2rem));
+margin:0 auto;
+}
 
-    .site-nav .container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      flex-wrap: wrap;
-    }
+.site-nav{
+background:#ffffffcc;
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+position:sticky;
+top:0;
+z-index:10;
+}
 
-    .site-nav a {
-      font-size: 0.98rem;
-      color: var(--muted);
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
+.site-nav .container{
+display:flex;
+justify-content:center;
+gap:2rem;
+padding:1rem 0;
+flex-wrap:wrap;
+}
 
-    .site-nav a:hover,
-    .site-nav a.active {
-      color: var(--accent);
-    }
+.site-nav a{
+font-size:0.98rem;
+color:var(--muted);
+font-weight:500;
+text-decoration:none;
+}
 
-    .hero {
-      padding: 4rem 0 2rem;
-    }
+.site-nav a:hover,
+.site-nav a.active{
+color:var(--accent);
+}
 
-    .hero-card {
-      background: linear-gradient(to bottom right, #ffffff, #f8fafc);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 3rem;
-    }
+.hero{
+padding:4rem 0 2rem;
+}
 
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+.hero-card{
+background:linear-gradient(to bottom right,#ffffff,#f8fafc);
+border:1px solid var(--line);
+border-radius:24px;
+box-shadow:var(--shadow);
+padding:3rem;
+}
 
-    h1 {
-      margin: 0 0 1rem;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
+.eyebrow{
+font-size:0.85rem;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--accent);
+font-weight:700;
+margin-bottom:1rem;
+}
 
-    .meta {
-      color: var(--muted);
-      font-size: 1.02rem;
-      margin-bottom: 2rem;
-    }
+h1{
+margin:0 0 1rem;
+font-size:clamp(2rem,4vw,3rem);
+}
 
-    .content-card {
-      margin-top: 1.5rem;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 2rem 2.25rem;
-    }
+.meta{
+color:var(--muted);
+margin-bottom:2rem;
+}
 
-    .content-card p {
-      margin: 0 0 1.4rem;
-      font-size: 1.06rem;
-      color: var(--text);
-    }
+.content-card{
+margin-top:1.5rem;
+background:var(--card);
+border:1px solid var(--line);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+padding:2rem 2.25rem;
+}
 
-    .content-card p:last-child {
-      margin-bottom: 0;
-    }
+.content-card p{
+margin:0 0 1.4rem;
+font-size:1.06rem;
+}
 
-    footer {
-      padding: 2rem 0 3rem;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.95rem;
-    }
+.publication-image{
+margin-top:30px;
+text-align:center;
+}
 
-    @media (max-width: 700px) {
-      .hero {
-        padding: 2.5rem 0 1rem;
-      }
+.publication-image img{
+max-width:100%;
+border-radius:12px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
 
-      .hero-card,
-      .content-card {
-        padding: 1.5rem;
-      }
+footer{
+padding:2rem 0 3rem;
+color:var(--muted);
+text-align:center;
+font-size:0.95rem;
+}
 
-      .site-nav .container {
-        gap: 1rem;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <nav class="site-nav">
-    <div class="container">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="media.html">Media</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-card">
-        <div class="eyebrow">About</div>
-        <h1>Biography</h1>
-        <div class="meta">Physician-Scientist • Host–Microbe Interactions • Early-Life Immunity</div>
-      </div>
+<nav class="site-nav">
+<div class="container">
+<a href="index.html">Home</a>
+<a href="about.html" class="active">About</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="media.html">Media</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
 
-      <div class="content-card">
-        <p>
-          I am a physician-scientist studying host–microbe interactions and microbial pathogenesis during early life.
-        </p>
+<main class="container">
 
-        <p>
-          I currently serve as a Project Scientist at the University of California, Riverside, where I investigate immune responses to intestinal microbes relevant to neonatal host defense and vaccine development.
-        </p>
+<section class="hero">
 
-        <p>
-          Previously, I conducted postdoctoral research at the California Institute of Technology and UPMC Children’s Hospital of Pittsburgh.
-        </p>
+<div class="hero-card">
+<div class="eyebrow">About</div>
+<h1>Biography</h1>
+<div class="meta">Physician-Scientist • Host–Microbe Interactions • Early-Life Immunity</div>
+</div>
 
-        <p>
-          I received my PhD in Human Genetics from the University of Pittsburgh.
-        </p>
-      </div>
-    </section>
-  </main>
+<div class="content-card">
 
-  <footer>
-    © Kathyayini Gopalakrishna
-  </footer>
+<p>
+I am a physician-scientist studying host–microbe interactions and microbial pathogenesis during early life.
+</p>
+
+<p>
+I currently serve as a Project Scientist at the University of California, Riverside, where I investigate immune responses to intestinal microbes relevant to neonatal host defense and vaccine development.
+</p>
+
+<p>
+Previously, I conducted postdoctoral research at the California Institute of Technology and UPMC Children’s Hospital of Pittsburgh.
+</p>
+
+<p>
+I received my PhD in Human Genetics from the University of Pittsburgh.
+</p>
+
+<div class="publication-image">
+<img src="about.png" alt="Nature Medicine publication on maternal IgA and necrotizing enterocolitis">
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+© Kathyayini Gopalakrishna
+</footer>
+
 </body>
 </html>
