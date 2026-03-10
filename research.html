@@ -1,116 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Research | Kathyayini Gopalakrishna</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:#222;
-    line-height:1.6;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+margin:0;
+background:#F6F8FB;
+color:#2D3748;
+line-height:1.7;
 }
 
-/* Navigation bar */
+/* NAVBAR */
 
-.top-nav{
-    background:#ffffff;
-    border-bottom:1px solid #e5e5e5;
-    padding:18px 0;
+header{
+background:white;
+padding:18px 60px;
+border-bottom:1px solid #E2E8F0;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.nav-container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:0 24px;
-    display:flex;
-    justify-content:center;
-    gap:32px;
-    flex-wrap:wrap;
+nav a{
+color:#1E3A5F;
+margin-right:24px;
+text-decoration:none;
+font-weight:500;
 }
 
-.top-nav a{
-    text-decoration:none;
-    color:#111;
-    font-size:16px;
-    font-weight:500;
+nav a:hover{
+opacity:0.7;
 }
 
-.top-nav a:hover{
-    text-decoration:underline;
+/* HERO BANNER */
+
+.hero-banner{
+background:linear-gradient(135deg,#FFD6E7,#FFC1DA,#FFB3D1);
+height:180px;
 }
 
-/* Page container */
+/* PAGE WRAPPER */
 
 .container{
-    max-width:900px;
-    margin:0 auto;
-    padding:56px 24px;
+max-width:1100px;
+margin:auto;
+padding:70px 30px;
+border-bottom:1px solid #E2E8F0;
 }
 
-h1{
-    font-size:36px;
-    margin-bottom:14px;
+.intro-section{
+max-width:1100px;
+margin:auto;
+padding:60px 30px 20px 30px;
 }
 
-h2{
-    font-size:26px;
-    margin-top:42px;
-    margin-bottom:18px;
+.page-title{
+font-size:38px;
+margin-bottom:16px;
+color:#1E3A5F;
 }
 
-h3{
-    font-size:20px;
-    margin-bottom:8px;
+.section-title{
+font-size:28px;
+margin-bottom:25px;
+color:#1E3A5F;
 }
 
-p{
-    font-size:17px;
-    margin-bottom:18px;
+.lead-text{
+font-size:18px;
+max-width:900px;
 }
 
-/* Research blocks */
+/* RESEARCH GRID */
 
-.research-area{
-    margin-bottom:30px;
-    padding-bottom:8px;
-    border-bottom:1px solid #f0f0f0;
+.research-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
 }
 
-.vision{
-    margin-top:40px;
-    padding:28px;
-    background:#fafafa;
-    border-left:4px solid #222;
+.research-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
-.future-lab{
-    margin-top:36px;
-    padding:28px;
-    background:#fcfcfc;
-    border:1px solid #e5e5e5;
+.research-card h3{
+margin-top:0;
+margin-bottom:12px;
+color:#1E3A5F;
+font-size:20px;
 }
 
-/* Footer */
+/* FEATURE SECTIONS */
 
-footer{
-    text-align:center;
-    padding:28px 20px 40px;
-    font-size:14px;
-    color:#777;
+.feature-card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.05);
+max-width:1000px;
+}
+
+.feature-card h3{
+margin-top:0;
+margin-bottom:14px;
+color:#1E3A5F;
+font-size:22px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+header{
+padding:15px 20px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.container{
+padding:40px 20px;
+}
+
+.intro-section{
+padding:40px 20px 10px 20px;
+}
+
+.page-title{
+font-size:30px;
+}
+
+.section-title{
+font-size:22px;
+}
+
+.research-grid{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<nav class="top-nav">
-<div class="nav-container">
+<header>
+
+<nav>
+
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="research.html">Research</a>
@@ -118,51 +170,66 @@ footer{
 <a href="media.html">Media</a>
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a>
-</div>
+
 </nav>
 
-<div class="container">
+</header>
 
-<h1>Research Overview</h1>
+<div class="hero-banner"></div>
 
-<p>
+<div class="intro-section">
+
+<h1 class="page-title">Research Overview</h1>
+
+<p class="lead-text">
 My research focuses on understanding molecular and immunological mechanisms governing host–microbe interactions during early life.
 </p>
 
-<h2>Research Areas</h2>
+</div>
 
-<div class="research-area">
+<div class="container">
+
+<h2 class="section-title">Research Areas</h2>
+
+<div class="research-grid">
+
+<div class="research-card">
 <h3>Maternal Immunity and Neonatal Microbiome</h3>
 <p>
 Investigating how maternal antibodies regulate microbial colonization and immune development during early life.
 </p>
 </div>
 
-<div class="research-area">
+<div class="research-card">
 <h3>Microbial Determinants of Pathogenesis</h3>
 <p>
 Identifying microbial genes that control colonization, virulence, and immune modulation.
 </p>
 </div>
 
-<div class="research-area">
+<div class="research-card">
 <h3>Microbiome–Immune Interactions</h3>
 <p>
 Studying how microbial communities influence immune signaling pathways and host defense mechanisms.
 </p>
 </div>
 
-<div class="research-area">
+<div class="research-card">
 <h3>Functional Genomics of Microbial Virulence</h3>
 <p>
 Using CRISPR-based approaches to identify bacterial genes involved in microbial pathogenesis.
 </p>
 </div>
 
-<div class="vision">
+</div>
 
-<h2>Research Vision</h2>
+</div>
 
+<div class="container">
+
+<h2 class="section-title">Research Vision</h2>
+
+<div class="feature-card">
 <p>
 My long-term goal is to establish an interdisciplinary research program that defines molecular mechanisms governing host–microbe interactions and translates these discoveries into strategies for preventing infectious diseases.
 </p>
@@ -170,26 +237,22 @@ My long-term goal is to establish an interdisciplinary research program that def
 <p>
 Understanding these interactions will enable the development of vaccines, microbiome-based therapeutics, and strategies to prevent neonatal infections.
 </p>
+</div>
 
 </div>
 
-<div class="future-lab">
+<div class="container">
 
-<h2>Future Lab</h2>
+<h2 class="section-title">Future Lab</h2>
 
+<div class="feature-card">
 <h3>The Gopalakrishna Laboratory</h3>
-
 <p>
 The Gopalakrishna laboratory will study how microbes interact with the immune system at mucosal surfaces and how these interactions influence susceptibility to infection during early life.
 </p>
-
 </div>
 
 </div>
-
-<footer>
-© Kathyayini Gopalakrishna
-</footer>
 
 </body>
 </html>
