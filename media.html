@@ -173,18 +173,19 @@
       border-bottom:1px solid #E2E8F0;
     }
 
-    .media-list{
+    .media-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:18px;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:24px;
+      align-items:start;
     }
 
     .media-card,
     .media-card-static{
       display:block;
       background:white;
-      padding:20px;
-      border-radius:12px;
+      border-radius:16px;
+      overflow:hidden;
       box-shadow:0 6px 18px rgba(0,0,0,0.05);
       text-decoration:none;
       color:inherit;
@@ -193,14 +194,34 @@
     }
 
     .media-card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 10px 24px rgba(0,0,0,0.08);
+      transform:translateY(-4px);
+      box-shadow:0 12px 28px rgba(0,0,0,0.08);
       border-color:#E2E8F0;
     }
 
     .media-card-static{
       border:1px dashed #D6DEE8;
       background:#FCFDFF;
+      padding:20px;
+    }
+
+    .media-image-wrap{
+      display:block;
+      width:100%;
+      aspect-ratio:4/3;
+      overflow:hidden;
+      background:#EDF2F7;
+    }
+
+    .media-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .media-content{
+      padding:18px 18px 20px;
     }
 
     .media-title{
@@ -222,6 +243,21 @@
       font-size:13px;
       color:#718096;
       word-break:break-word;
+    }
+
+    .media-list-no-image{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .no-image-label{
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      color:#718096;
+      margin:28px 0 12px;
     }
 
     @media (max-width:768px){
@@ -263,8 +299,26 @@
         height:90px;
       }
 
-      .media-list{
+      .media-grid{
         grid-template-columns:1fr;
+        gap:20px;
+      }
+
+      .media-card,
+      .media-card-static{
+        border-radius:0;
+        margin-left:calc(50% - 50vw);
+        margin-right:calc(50% - 50vw);
+      }
+
+      .media-image-wrap{
+        aspect-ratio:16/10;
+      }
+
+      .media-content,
+      .media-card-static{
+        padding-left:20px;
+        padding-right:20px;
       }
     }
   </style>
@@ -297,12 +351,10 @@
 
 <div class="hero-banner"></div>
 
-<!-- FEATURED COMMENTARY -->
 <div class="container">
   <h1 class="section-title">Featured Scientific Commentary</h1>
 
   <div class="commentary-grid">
-
     <a class="commentary-card" href="https://www.sciencedirect.com/science/article/pii/S1074761319303267" target="_blank" rel="noopener">
       <img class="commentary-icon" src="immunity.png" alt="Immunity">
       <div>
@@ -329,306 +381,359 @@
         <div class="commentary-journal">Cell Host &amp; Microbe</div>
       </div>
     </a>
-
   </div>
 </div>
 
-<!-- MEDIA COVERAGE -->
 <div class="container">
   <h2 class="section-title">Media Coverage</h2>
-  <div class="section-subtitle">Grouped by country of origin.</div>
+  <div class="section-subtitle">Grouped by country of origin. Articles with images appear first within each country.</div>
 
-  <!-- UNITED STATES -->
   <div class="country-block">
     <h3 class="country-title">United States</h3>
-    <div class="media-list">
 
+    <div class="media-grid">
       <a class="media-card" href="https://www.usnews.com/news/health-news/articles/2019-06-17/another-reason-breast-is-best-for-fragile-preemie-babies" target="_blank" rel="noopener">
-        <div class="media-title">Another Reason Breast Is Best for Fragile Preemie Babies</div>
-        <div class="media-source">U.S. News &amp; World Report</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/usnews&report.png" alt="U.S. News &amp; World Report article image"></span>
+        <div class="media-content">
+          <div class="media-title">Another Reason Breast Is Best for Fragile Preemie Babies</div>
+          <div class="media-source">U.S. News &amp; World Report</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
 
-      <a class="media-card" href="https://www.cbsnews.com/baltimore/news/healthwatch-breast-milk-helps-preterm-babies-fight-deadly-intestinal-disease/" target="_blank" rel="noopener">
+      <a class="media-card" href="https://www.healthline.com/health-news/breastfeeding-preterm-infants-can-protect-them-from-dangerous-gut-bacteria" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/healthlineimage.png" alt="Healthline article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breast Milk Can Protect Preterm Infants from Dangerous Gut Bacteria</div>
+          <div class="media-source">Healthline</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://www.genengnews.com/topics/omics/breastmilks-iga-protects-premature-babies-from-deadly-disease/" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/genengnews.png" alt="Genetic Engineering &amp; Biotechnology News article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breastmilk’s IgA Protects Preemies From Deadly Disease</div>
+          <div class="media-source">Genetic Engineering &amp; Biotechnology News</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://www.eurekalert.org/news-releases/639600" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/eurekalert.png" alt="EurekAlert article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breastmilk antibody protects preterm infants from deadly intestinal disease</div>
+          <div class="media-source">EurekAlert!</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://medicalxpress.com/news/2019-06-breastmilk-antibody-preterm-infants-deadly.html" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/medicalxpressimage.png" alt="MedicalXpress article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breastmilk Antibody Protects Preterm Infants from Deadly Intestinal Disease</div>
+          <div class="media-source">MedicalXpress</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://vivemichigan.com/otro-motivo-de-que-la-leche-materna-sea-lo-mejor-para-los-fragiles-bebes-prematuros/" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/vivemichigan.png" alt="Vive Michigan article image"></span>
+        <div class="media-content">
+          <div class="media-title">Otro motivo de que la leche materna sea lo mejor para los frágiles bebés prematuros</div>
+          <div class="media-source">Vive Michigan</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://www.upmc.com/media/news/061719-hand-iga-breastmilk" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/upmc.png" alt="UPMC News article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breastmilk Antibody Protects Infants from Deadly Disease</div>
+          <div class="media-source">UPMC News</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://www.pittmed.pitt.edu/news/breastmilk-unique-antibodies-necrotizing-enterocolitis-timothy-hand-kathyayini-gopalakrishna-chelsea-johnson-hence" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/pittmed.png" alt="PittMed article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breastmilk Unique Antibodies and Necrotizing Enterocolitis</div>
+          <div class="media-source">PittMed</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="no-image-label">More coverage</div>
+    <div class="media-list-no-image">
+      <a class="media-card-static" href="https://www.cbsnews.com/baltimore/news/healthwatch-breast-milk-helps-preterm-babies-fight-deadly-intestinal-disease/" target="_blank" rel="noopener">
         <div class="media-title">HealthWatch: Breast Milk Helps Preterm Babies Fight Deadly Intestinal Disease</div>
         <div class="media-source">CBS Baltimore</div>
         <div class="media-link">View article</div>
       </a>
-
-      <a class="media-card" href="https://www.healthline.com/health-news/breastfeeding-preterm-infants-can-protect-them-from-dangerous-gut-bacteria" target="_blank" rel="noopener">
-        <div class="media-title">Breast Milk Can Protect Preterm Infants from Dangerous Gut Bacteria</div>
-        <div class="media-source">Healthline</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://www.genengnews.com/topics/omics/breastmilks-iga-protects-premature-babies-from-deadly-disease/" target="_blank" rel="noopener">
-        <div class="media-title">Breastmilk’s IgA Protects Preemies From Deadly Disease</div>
-        <div class="media-source">Genetic Engineering &amp; Biotechnology News</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://www.eurekalert.org/news-releases/639600" target="_blank" rel="noopener">
-        <div class="media-title">Breastmilk antibody protects preterm infants from deadly intestinal disease</div>
-        <div class="media-source">EurekAlert!</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://medicalxpress.com/news/2019-06-breastmilk-antibody-preterm-infants-deadly.html" target="_blank" rel="noopener">
-        <div class="media-title">Breastmilk Antibody Protects Preterm Infants from Deadly Intestinal Disease</div>
-        <div class="media-source">MedicalXpress</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://vivemichigan.com/otro-motivo-de-que-la-leche-materna-sea-lo-mejor-para-los-fragiles-bebes-prematuros/" target="_blank" rel="noopener">
-        <div class="media-title">Otro motivo de que la leche materna sea lo mejor para los frágiles bebés prematuros</div>
-        <div class="media-source">Vive Michigan</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://www.upmc.com/media/news/061719-hand-iga-breastmilk" target="_blank" rel="noopener">
-        <div class="media-title">Breastmilk Antibody Protects Infants from Deadly Disease</div>
-        <div class="media-source">UPMC News</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://www.pittmed.pitt.edu/news/breastmilk-unique-antibodies-necrotizing-enterocolitis-timothy-hand-kathyayini-gopalakrishna-chelsea-johnson-hence" target="_blank" rel="noopener">
-        <div class="media-title">Breastmilk Unique Antibodies and Necrotizing Enterocolitis</div>
-        <div class="media-source">PittMed</div>
-        <div class="media-link">View article</div>
-      </a>
-
     </div>
   </div>
 
-  <!-- UNITED KINGDOM -->
   <div class="country-block">
     <h3 class="country-title">United Kingdom</h3>
-    <div class="media-list">
 
+    <div class="media-grid">
       <a class="media-card" href="https://www.dailymail.co.uk/health/article-7150035/Breastmilk-protects-premature-babies-against-deadly-infection-contains-antibody.html" target="_blank" rel="noopener">
-        <div class="media-title">Mother's Milk Protects Premature Babies Against Deadly Infection - But Only if it Contains a Special Antibody, Study Finds</div>
-        <div class="media-source">Daily Mail</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/dailymailimage.png" alt="Daily Mail article image"></span>
+        <div class="media-content">
+          <div class="media-title">Mother's Milk Protects Premature Babies Against Deadly Infection - But Only if it Contains a Special Antibody, Study Finds</div>
+          <div class="media-source">Daily Mail</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
+    </div>
 
-      <a class="media-card" href="https://www.thelondoneconomic.com/lifestyle/breastfeeding-protects-premature-babies-from-deadly-disease-135965/" target="_blank" rel="noopener">
+    <div class="no-image-label">More coverage</div>
+    <div class="media-list-no-image">
+      <a class="media-card-static" href="https://www.thelondoneconomic.com/lifestyle/breastfeeding-protects-premature-babies-from-deadly-disease-135965/" target="_blank" rel="noopener">
         <div class="media-title">Breastfeeding ‘protects premature babies from deadly disease’</div>
         <div class="media-source">The London Economic</div>
         <div class="media-link">View article</div>
       </a>
-
     </div>
   </div>
 
-  <!-- SWITZERLAND -->
   <div class="country-block">
     <h3 class="country-title">Switzerland</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://www.nzz.ch/wissenschaft/nekrotisierende-enterokolitis-antikoerper-in-muttermilch-schuetzen-ld.1490086" target="_blank" rel="noopener">
-        <div class="media-title">Natürlicher Schutz vor Gefürchtetem Darm-Notfall</div>
-        <div class="media-source">Neue Zürcher Zeitung</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/nzz.png" alt="Neue Zürcher Zeitung article image"></span>
+        <div class="media-content">
+          <div class="media-title">Natürlicher Schutz vor Gefürchtetem Darm-Notfall</div>
+          <div class="media-source">Neue Zürcher Zeitung</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
 
-  <!-- ITALY -->
   <div class="country-block">
     <h3 class="country-title">Italy</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://www.corriere.it/salute/23_luglio_31/latte-materno-puo-proteggere-nec-grave-infiammazione-intestinale-che-colpisce-neonati-54059824-247b-11ee-980b-de3bb593be5c.shtml" target="_blank" rel="noopener">
-        <div class="media-title">Il latte materno può proteggere dalla NEC, la grave infiammazione intestinale che colpisce i neonati</div>
-        <div class="media-source">Corriere della Sera</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/corriere.png" alt="Corriere della Sera article image"></span>
+        <div class="media-content">
+          <div class="media-title">Il latte materno può proteggere dalla NEC, la grave infiammazione intestinale che colpisce i neonati</div>
+          <div class="media-source">Corriere della Sera</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
 
       <a class="media-card" href="https://www.healthdesk.it/prevenzione/anticorpi-latte-materno-proteggono-neonati-infezioni-intestinali" target="_blank" rel="noopener">
-        <div class="media-title">Gli anticorpi del latte materno proteggono i neonati dalle infezioni intestinali</div>
-        <div class="media-source">Healthdesk</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/healthdesk.png" alt="Healthdesk article image"></span>
+        <div class="media-content">
+          <div class="media-title">Gli anticorpi del latte materno proteggono i neonati dalle infezioni intestinali</div>
+          <div class="media-source">Healthdesk</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
 
-  <!-- SPAIN -->
   <div class="country-block">
     <h3 class="country-title">Spain</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://www.abc.es/salud/enfermedades/abci-leche-materna-protege-bebes-prematuros-enfermedad-intestinal-mortal-201906181127_noticia.html?ref=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener">
-        <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
-        <div class="media-source">ABC</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/abc.png" alt="ABC article image"></span>
+        <div class="media-content">
+          <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
+          <div class="media-source">ABC</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
 
       <a class="media-card" href="https://www.infosalus.com/salud-investigacion/noticia-leche-materna-protege-bebes-prematuros-enfermedad-intestinal-mortal-20190618075131.html" target="_blank" rel="noopener">
-        <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
-        <div class="media-source">Infosalus</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/Infosalus.png" alt="Infosalus article image"></span>
+        <div class="media-content">
+          <div class="media-title">La leche materna protege a los bebés prematuros de una enfermedad intestinal mortal</div>
+          <div class="media-source">Infosalus</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
 
-  <!-- GERMANY -->
   <div class="country-block">
     <h3 class="country-title">Germany</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://biermann-medizin.de/antikoerper-in-muttermilch-schuetzen-fruehgeborene-vor-toedlicher-darmerkrankung/" target="_blank" rel="noopener">
-        <div class="media-title">Antikörper in Muttermilch schützen Frühgeborene vor tödlicher Darmerkrankung</div>
-        <div class="media-source">Biermann-Medizin</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/biermann.png" alt="Biermann-Medizin article image"></span>
+        <div class="media-content">
+          <div class="media-title">Antikörper in Muttermilch schützen Frühgeborene vor tödlicher Darmerkrankung</div>
+          <div class="media-source">Biermann-Medizin</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
 
       <a class="media-card" href="https://milchwiese.de/blog/muttermilch-fuer-fruehchen-ein-kracher" target="_blank" rel="noopener">
-        <div class="media-title">Muttermilch für Frühchen | Ein Kracher!</div>
-        <div class="media-source">Milchwiese</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/milchwiese.png" alt="Milchwiese article image"></span>
+        <div class="media-content">
+          <div class="media-title">Muttermilch für Frühchen | Ein Kracher!</div>
+          <div class="media-source">Milchwiese</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
 
       <a class="media-card" href="https://www.aerzteblatt.de/news/iga-antikoerper-in-der-muttermilch-schuetzen-fruehgeborene-vor-nekrotisierender-enterokolitis-4c2d8fa6-961b-4aeb-a6a3-b3348b650e3e" target="_blank" rel="noopener">
-        <div class="media-title">IgA-Antikörper in der Muttermilch schützen Frühgeborene vor nekrotisierender Enterokolitis</div>
-        <div class="media-source">Aerzteblatt</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/aerzteblatt.png" alt="Aerzteblatt article image"></span>
+        <div class="media-content">
+          <div class="media-title">IgA-Antikörper in der Muttermilch schützen Frühgeborene vor nekrotisierender Enterokolitis</div>
+          <div class="media-source">Aerzteblatt</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
 
-  <!-- INDIA -->
   <div class="country-block">
     <h3 class="country-title">India</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://www.medindia.net/news/breast-milk-antibody-saves-preterm-infants-from-intestinal-disease-188389-1.htm" target="_blank" rel="noopener">
-        <div class="media-title">Breast Milk Antibody Saves Preterm Infants from Intestinal Disease</div>
-        <div class="media-source">MedIndia</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/medindia.png" alt="MedIndia article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breast Milk Antibody Saves Preterm Infants from Intestinal Disease</div>
+          <div class="media-source">MedIndia</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
 
-  <!-- BRAZIL -->
   <div class="country-block">
     <h3 class="country-title">Brazil</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://bioemfoco.com.br/noticia/leite-materno-proteger-prematuros-bacteria-intestino/" target="_blank" rel="noopener">
-        <div class="media-title">Leite materno pode proteger prematuros de bactéria perigosa do intestino</div>
-        <div class="media-source">Bioemfoco</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/bioemfoco.png" alt="Bioemfoco article image"></span>
+        <div class="media-content">
+          <div class="media-title">Leite materno pode proteger prematuros de bactéria perigosa do intestino</div>
+          <div class="media-source">Bioemfoco</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
 
-  <!-- INDONESIA -->
   <div class="country-block">
     <h3 class="country-title">Indonesia</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://www.klikdokter.com/ibu-anak/ibu-menyusui/asi-melindungi-bayi-prematur-dari-bakteri-usus-berbahaya" target="_blank" rel="noopener">
-        <div class="media-title">ASI Melindungi Bayi Prematur dari Bakteri Usus Berbahaya</div>
-        <div class="media-source">KlikDokter</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/klikdokter.png" alt="KlikDokter article image"></span>
+        <div class="media-content">
+          <div class="media-title">ASI Melindungi Bayi Prematur dari Bakteri Usus Berbahaya</div>
+          <div class="media-source">KlikDokter</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
+    </div>
 
-      <a class="media-card" href="https://www.ungu.me/2019/06/asi-dapat-melindungi-bayi-prematur-dari.html" target="_blank" rel="noopener">
+    <div class="no-image-label">More coverage</div>
+    <div class="media-list-no-image">
+      <a class="media-card-static" href="https://www.ungu.me/2019/06/asi-dapat-melindungi-bayi-prematur-dari.html" target="_blank" rel="noopener">
         <div class="media-title">ASI Dapat Melindungi Bayi Prematur Dari Bakteri Usus Berbahaya</div>
         <div class="media-source">Ungu</div>
         <div class="media-link">View article</div>
       </a>
-
     </div>
   </div>
 
-  <!-- CHINA -->
   <div class="country-block">
     <h3 class="country-title">China</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://news.bioon.com/article/6740601.html" target="_blank" rel="noopener">
-        <div class="media-title">母乳中的特殊抗体或能保护早产婴儿免于致死性肠道疾病的影响</div>
-        <div class="media-source">Bioon</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/bioon.png" alt="Bioon article image"></span>
+        <div class="media-content">
+          <div class="media-title">母乳中的特殊抗体或能保护早产婴儿免于致死性肠道疾病的影响</div>
+          <div class="media-source">Bioon</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
 
-      <a class="media-card" href="https://h5.news.qq.com/static/babyhome.htm?pgv_ref=apub" target="_blank" rel="noopener">
+      <a class="media-card" href="https://paper.sciencenet.cn/htmlpaper/2019/7/201972718535199951080.shtm" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/sciencenet.jpeg" alt="Sciencenet article image"></span>
+        <div class="media-content">
+          <div class="media-title">母体IgA对早产儿坏死性小肠结肠炎具有保护作用</div>
+          <div class="media-source">Sciencenet</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://yixue.cnjiyin.com/yixue/20190619_13932.html" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/cnjiyin.png" alt="Cnjiyin article image"></span>
+        <div class="media-content">
+          <div class="media-title">母乳喂养的IgA保护Preemies不受致命疾病的影响</div>
+          <div class="media-source">Cnjiyin</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+
+      <a class="media-card" href="https://kknews.cc/health/bm4emgn.html" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="images/kknews.png" alt="KKNews article image"></span>
+        <div class="media-content">
+          <div class="media-title">研究發現母乳中的抗體可保護早產兒免於致命性腸道疾病</div>
+          <div class="media-source">KKNews</div>
+          <div class="media-link">View article</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="no-image-label">More coverage</div>
+    <div class="media-list-no-image">
+      <a class="media-card-static" href="https://h5.news.qq.com/static/babyhome.htm?pgv_ref=apub" target="_blank" rel="noopener">
         <div class="media-title">母乳中的特殊抗体或能保护早产婴儿免于致死性肠道疾病的影响</div>
         <div class="media-source">QQ News</div>
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://paper.sciencenet.cn/htmlpaper/2019/7/201972718535199951080.shtm" target="_blank" rel="noopener">
-        <div class="media-title">母体IgA对早产儿坏死性小肠结肠炎具有保护作用</div>
-        <div class="media-source">Sciencenet</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://www.antpedia.com/news/45/n-2318245.html" target="_blank" rel="noopener">
+      <a class="media-card-static" href="https://www.antpedia.com/news/45/n-2318245.html" target="_blank" rel="noopener">
         <div class="media-title">研究发现母乳中的抗体可保护早产儿免于致命性肠道疾病</div>
         <div class="media-source">Antpedia</div>
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://yixue.cnjiyin.com/yixue/20190619_13932.html" target="_blank" rel="noopener">
-        <div class="media-title">母乳喂养的IgA保护Preemies不受致命疾病的影响</div>
-        <div class="media-source">Cnjiyin</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://kknews.cc/health/bm4emgn.html" target="_blank" rel="noopener">
-        <div class="media-title">研究發現母乳中的抗體可保護早產兒免於致命性腸道疾病</div>
-        <div class="media-source">KKNews</div>
-        <div class="media-link">View article</div>
-      </a>
-
-      <a class="media-card" href="https://kjj-siping-gov-cn.translate.goog/kjxx/cgzs/201907/t20190725_314431.html?_x_tr_sch=http&_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=op" target="_blank" rel="noopener">
+      <a class="media-card-static" href="https://kjj-siping-gov-cn.translate.goog/kjxx/cgzs/201907/t20190725_314431.html?_x_tr_sch=http&_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=op" target="_blank" rel="noopener">
         <div class="media-title">研究发现母乳中的抗体可保护早产儿免于致命性肠道疾病</div>
         <div class="media-source">Siping.gov</div>
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="http://www.biodiscover.com/news/industry/734444.html" target="_blank" rel="noopener">
+      <a class="media-card-static" href="http://www.biodiscover.com/news/industry/734444.html" target="_blank" rel="noopener">
         <div class="media-title">速览 | 母乳IgA可预防早产儿坏死性小肠结肠炎的发生</div>
         <div class="media-source">Biodiscover</div>
         <div class="media-link">View article</div>
       </a>
 
-      <a class="media-card" href="https://www.ccaiye.com/kepu/syjh/204463.html" target="_blank" rel="noopener">
+      <a class="media-card-static" href="https://www.ccaiye.com/kepu/syjh/204463.html" target="_blank" rel="noopener">
         <div class="media-title">母乳IgA可预防早产儿坏死性小肠结肠炎的发生</div>
         <div class="media-source">Ccaiye</div>
         <div class="media-link">View article</div>
       </a>
-
     </div>
   </div>
 
-  <!-- INTERNATIONAL / MULTINATIONAL -->
   <div class="country-block">
     <h3 class="country-title">International / Multinational</h3>
-    <div class="media-list">
-
+    <div class="media-grid">
       <a class="media-card" href="https://www.gutmicrobiotaforhealth.com/an-increase-in-enterobacteriaceae-not-bound-to-iga-drives-the-reduced-intestinal-bacterial-diversity-that-precedes-necrotizing-enterocolitis-in-preterm-infants/" target="_blank" rel="noopener">
-        <div class="media-title">An increase in Enterobacteriaceae not bound to IgA drives the reduced intestinal bacterial diversity that precedes necrotizing enterocolitis in preterm infants</div>
-        <div class="media-source">Gut Microbiota for Health</div>
-        <div class="media-link">View article</div>
+        <span class="media-image-wrap"><img class="media-image" src="images/gutmicrobiotaforhealth.png" alt="Gut Microbiota for Health article image"></span>
+        <div class="media-content">
+          <div class="media-title">An increase in Enterobacteriaceae not bound to IgA drives the reduced intestinal bacterial diversity that precedes necrotizing enterocolitis in preterm infants</div>
+          <div class="media-source">Gut Microbiota for Health</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-
     </div>
   </div>
-
 </div>
 
 <footer style="text-align:center;padding:30px 10px;color:#718096;font-size:14px;border-top:1px solid #E2E8F0;margin-top:40px;">
 © Kathyayini Gopalakrishna
 </footer>
-  
+
 </body>
 </html>
