@@ -28,21 +28,73 @@ top:0;
 z-index:1000;
 }
 
-nav a{
+nav.desktop-nav a{
 color:#1E3A5F;
 margin-right:24px;
 text-decoration:none;
 font-weight:500;
 }
 
-nav a:hover{
+nav.desktop-nav a:hover{
 opacity:0.7;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+display:none;
+position:relative;
+margin-left:auto;
+}
+
+.menu-toggle{
+background:#ffffff;
+border:1px solid #CBD5E0;
+border-radius:8px;
+padding:8px 12px;
+font-size:18px;
+cursor:pointer;
+color:#1E3A5F;
+}
+
+.menu-dropdown{
+display:none;
+position:absolute;
+right:0;
+top:42px;
+background:white;
+border:1px solid #E2E8F0;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+min-width:160px;
+overflow:hidden;
+}
+
+.menu-dropdown a{
+display:block;
+padding:12px 16px;
+text-decoration:none;
+color:#1E3A5F;
+font-weight:500;
+border-bottom:1px solid #EDF2F7;
+}
+
+.menu-dropdown a:last-child{
+border-bottom:none;
+}
+
+.menu-dropdown a:hover{
+background:#F7FAFC;
+}
+
+.mobile-menu:hover .menu-dropdown{
+display:block;
 }
 
 /* HERO */
 
 .hero-banner{
-background:linear-gradient(135deg,#FFD6E7,#FFC1DA,#FFB3D1);
+background:#FFFFFF;
 height:240px;
 }
 
@@ -247,17 +299,23 @@ padding:18px;
 @media (max-width:768px){
 
 header{
-padding:15px 20px;
+padding:14px 16px;
+display:flex;
+justify-content:flex-end;
+align-items:center;
 }
 
-nav{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
+nav.desktop-nav{
+display:none;
+}
+
+.mobile-menu{
+display:block;
 }
 
 .hero-banner{
 height:180px;
+background:#FFFFFF;
 }
 
 .profile-section{
@@ -300,7 +358,7 @@ grid-template-columns:1fr;
 
 <header>
 
-<nav>
+<nav class="desktop-nav">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="research.html">Research</a>
@@ -308,6 +366,18 @@ grid-template-columns:1fr;
 <a href="cv.html">CV</a>
 <a href="contact.html">Contact</a>
 </nav>
+
+<div class="mobile-menu">
+<button class="menu-toggle">☰</button>
+<div class="menu-dropdown">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="media.html">Media</a>
+<a href="cv.html">CV</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
 
 </header>
 
@@ -379,14 +449,12 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     </filter>
   </defs>
 
-  <!-- Connecting curves -->
   <path d="M170 85 C240 110, 250 130, 280 155" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
   <path d="M170 280 C240 255, 250 235, 280 210" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
   <path d="M365 180 C430 180, 445 105, 500 90" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
   <path d="M365 180 C430 180, 445 180, 500 180" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
   <path d="M365 180 C430 180, 445 255, 500 270" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
 
-  <!-- Top left: Maternal immunity -->
   <g filter="url(#softShadow)">
     <rect x="35" y="45" rx="18" ry="18" width="145" height="78" fill="url(#gradImmunity)" stroke="#C7D7F7"/>
     <circle cx="68" cy="84" r="16" fill="#2B6CB0" opacity="0.12"/>
@@ -396,7 +464,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="95" y="113" font-size="12.5" fill="#425466">immune transfer</text>
   </g>
 
-  <!-- Bottom left: Nutrition -->
   <g filter="url(#softShadow)">
     <rect x="35" y="240" rx="18" ry="18" width="145" height="78" fill="url(#gradNutrition)" stroke="#F2D0A7"/>
     <circle cx="68" cy="279" r="16" fill="#DD6B20" opacity="0.12"/>
@@ -406,7 +473,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="95" y="307" font-size="12.5" fill="#7B4A2F">metabolic signals</text>
   </g>
 
-  <!-- Center hub -->
   <g filter="url(#softShadow)">
     <ellipse cx="320" cy="182" rx="92" ry="72" fill="url(#gradCenter)" stroke="#D6E4F0" stroke-width="1.5"/>
     <circle cx="320" cy="155" r="16" fill="#FFD6E7" stroke="#E8AFC4"/>
@@ -418,7 +484,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="320" y="273" text-anchor="middle" font-size="12.5" fill="#4A5568">developmental susceptibility</text>
   </g>
 
-  <!-- Top right: Microbiome -->
   <g filter="url(#softShadow)">
     <rect x="500" y="48" rx="18" ry="18" width="110" height="78" fill="url(#gradMicrobiome)" stroke="#B8E7D6"/>
     <circle cx="528" cy="87" r="4.5" fill="#059669"/>
@@ -430,7 +495,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="556" y="112" text-anchor="middle" font-size="12.5" fill="#426B5E">Colonization and ecology</text>
   </g>
 
-  <!-- Middle right: Immune development -->
   <g filter="url(#softShadow)">
     <rect x="500" y="140" rx="18" ry="18" width="110" height="78" fill="#EFF6FF" stroke="#CFE0F6"/>
     <circle cx="530" cy="180" r="16" fill="#2B6CB0" opacity="0.10"/>
@@ -440,7 +504,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="556" y="211" text-anchor="middle" font-size="12.5" fill="#4A5568">Barrier and signaling</text>
   </g>
 
-  <!-- Bottom right: Disease risk -->
   <g filter="url(#softShadow)">
     <rect x="500" y="232" rx="18" ry="18" width="110" height="78" fill="url(#gradDisease)" stroke="#F4C7D0"/>
     <circle cx="528" cy="271" r="16" fill="#C53030" opacity="0.10"/>
@@ -449,7 +512,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="556" y="298" text-anchor="middle" font-size="12.5" fill="#7A4049">Neonatal susceptibility</text>
   </g>
 
-  <!-- Small genomics inset -->
   <g filter="url(#softShadow)">
     <rect x="255" y="20" rx="14" ry="14" width="130" height="56" fill="url(#gradGenomics)" stroke="#D8D0F8"/>
     <path d="M282 34 C288 28, 295 28, 301 34 C307 40, 314 40, 320 34" fill="none" stroke="#6B46C1" stroke-width="2"/>
@@ -459,7 +521,6 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
     <text x="344" y="59" font-size="13.5" font-weight="700" fill="#553C9A">Genomics</text>
   </g>
 
-  <!-- Link genomics to center -->
   <path d="M320 76 C320 92, 320 102, 320 109" fill="none" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
 
 </svg>
