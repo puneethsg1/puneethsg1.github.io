@@ -132,15 +132,15 @@
       box-shadow:0 10px 24px rgba(0,0,0,0.08);
     }
 
-    .commentary-icon{
-      width:110px;
-      height:110px;
+   .commentary-icon{
+      width:140px;
+      height:140px;
       object-fit:contain;
       border-radius:10px;
       background:#F8FAFC;
-      padding:10px;
+      padding:12px;
       flex-shrink:0;
-    }
+}
 
     .commentary-title{
       font-size:20px;
@@ -173,12 +173,19 @@
       border-bottom:1px solid #E2E8F0;
     }
 
-    .media-grid{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      gap:24px;
-      align-items:start;
-    }
+ .media-card{
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      background:white;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,0.05);
+      text-decoration:none;
+      color:inherit;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+      border:1px solid transparent;
+}
 
     .media-card,
     .media-card-static{
@@ -222,15 +229,19 @@
 
     .media-content{
       padding:18px 18px 20px;
-    }
+      display:flex;
+      flex-direction:column;
+      flex-grow:1;
+}
 
-    .media-title{
+   .media-title{
       font-size:17px;
       font-weight:600;
       color:#1E3A5F;
       margin-bottom:8px;
       line-height:1.45;
-    }
+      min-height:50px;
+}
 
     .media-source{
       font-size:14px;
@@ -295,21 +306,22 @@
       }
 
       .commentary-icon{
-        width:90px;
-        height:90px;
-      }
+        width:120px;
+        height:120px;
+}
 
       .media-grid{
         grid-template-columns:1fr;
         gap:20px;
       }
 
-      .media-card,
-      .media-card-static{
-        border-radius:0;
-        margin-left:calc(50% - 50vw);
-        margin-right:calc(50% - 50vw);
-      }
+    .media-card,
+.media-card-static{
+        border-radius:12px;
+        max-width:520px;
+        margin-left:auto;
+        margin-right:auto;
+}
 
       .media-image-wrap{
         aspect-ratio:16/10;
@@ -386,7 +398,6 @@
 
 <div class="container">
   <h2 class="section-title">Media Coverage</h2>
-  <div class="section-subtitle">Grouped by country of origin. Articles with images appear first within each country.</div>
 
   <div class="country-block">
     <h3 class="country-title">United States</h3>
@@ -428,15 +439,6 @@
         </div>
       </a>
 
-      <a class="media-card" href="https://medicalxpress.com/news/2019-06-breastmilk-antibody-preterm-infants-deadly.html" target="_blank" rel="noopener">
-        <span class="media-image-wrap"><img class="media-image" src="medicalxpressimage.png" alt="MedicalXpress article image"></span>
-        <div class="media-content">
-          <div class="media-title">Breastmilk Antibody Protects Preterm Infants from Deadly Intestinal Disease</div>
-          <div class="media-source">MedicalXpress</div>
-          <div class="media-link">View article</div>
-        </div>
-      </a>
-
       <a class="media-card" href="https://vivemichigan.com/otro-motivo-de-que-la-leche-materna-sea-lo-mejor-para-los-fragiles-bebes-prematuros/" target="_blank" rel="noopener">
         <span class="media-image-wrap"><img class="media-image" src="vivemichigan.png" alt="Vive Michigan article image"></span>
         <div class="media-content">
@@ -465,15 +467,14 @@
       </a>
     </div>
 
-    <div class="no-image-label">More coverage</div>
-    <div class="media-list-no-image">
-      <a class="media-card-static" href="https://www.cbsnews.com/baltimore/news/healthwatch-breast-milk-helps-preterm-babies-fight-deadly-intestinal-disease/" target="_blank" rel="noopener">
-        <div class="media-title">HealthWatch: Breast Milk Helps Preterm Babies Fight Deadly Intestinal Disease</div>
-        <div class="media-source">CBS Baltimore</div>
-        <div class="media-link">View article</div>
+          <a class="media-card" href="https://medicalxpress.com/news/2019-06-breastmilk-antibody-preterm-infants-deadly.html" target="_blank" rel="noopener">
+        <span class="media-image-wrap"><img class="media-image" src="medicalxpressimage.png" alt="MedicalXpress article image"></span>
+        <div class="media-content">
+          <div class="media-title">Breastmilk Antibody Protects Preterm Infants from Deadly Intestinal Disease</div>
+          <div class="media-source">MedicalXpress</div>
+          <div class="media-link">View article</div>
+        </div>
       </a>
-    </div>
-  </div>
 
   <div class="country-block">
     <h3 class="country-title">United Kingdom</h3>
@@ -630,17 +631,6 @@
           <div class="media-link">View article</div>
         </div>
       </a>
-
-      <a class="media-card" href="https://www.ungu.me/2019/06/asi-dapat-melindungi-bayi-prematur-dari.html" target="_blank" rel="noopener">
-        <span class="media-image-wrap"><img class="media-image" src="ungu.png" alt="Ungu article image"></span>
-        <div class="media-content">
-          <div class="media-title">ASI Dapat Melindungi Bayi Prematur Dari Bakteri Usus Berbahaya</div>
-          <div class="media-source">Ungu</div>
-          <div class="media-link">View article</div>
-        </div>
-      </a>
-    </div>
-  </div>
 
   <div class="country-block">
     <h3 class="country-title">China</h3>
