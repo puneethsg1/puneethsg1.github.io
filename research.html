@@ -407,123 +407,140 @@ I study how maternal immunity, microbial genetics, microbiome dynamics, and pedi
 
 <div class="schematic-title">Conceptual Framework</div>
 
-<svg viewBox="0 0 640 360" width="100%" height="360" aria-label="Graphical abstract of host-microbe interactions in early life">
+  <svg viewBox="0 0 640 360" width="100%" height="360" aria-label="Graphical abstract of host-microbe interactions in early life">
+    <defs>
+      <!-- Gradients -->
+      <linearGradient id="gradImmunity" x1="0" x2="1">
+        <stop offset="0%" stop-color="#E8F0FF"/>
+        <stop offset="100%" stop-color="#D8E7FF"/>
+      </linearGradient>
+      <linearGradient id="gradNutrition" x1="0" x2="1">
+        <stop offset="0%" stop-color="#FFF3E6"/>
+        <stop offset="100%" stop-color="#FFE6C7"/>
+      </linearGradient>
+      <linearGradient id="gradMicrobiome" x1="0" x2="1">
+        <stop offset="0%" stop-color="#E7FBF5"/>
+        <stop offset="100%" stop-color="#CFF3E8"/>
+      </linearGradient>
+      <linearGradient id="gradGenomics" x1="0" x2="1">
+        <stop offset="0%" stop-color="#F0ECFF"/>
+        <stop offset="100%" stop-color="#E2DAFF"/>
+      </linearGradient>
+      <linearGradient id="gradDisease" x1="0" x2="1">
+        <stop offset="0%" stop-color="#FFECEE"/>
+        <stop offset="100%" stop-color="#FFDADF"/>
+      </linearGradient>
+      <linearGradient id="gradCenter" x1="0" x2="1">
+        <stop offset="0%" stop-color="#F7FAFC"/>
+        <stop offset="100%" stop-color="#EDF2F7"/>
+      </linearGradient>
 
-  <defs>
-    <linearGradient id="gradImmunity" x1="0" x2="1">
-      <stop offset="0%" stop-color="#E8F0FF"/>
-      <stop offset="100%" stop-color="#D8E7FF"/>
-    </linearGradient>
+      <!-- Arrow marker -->
+      <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <polygon points="0 0, 10 5, 0 10" fill="#6B7280"/>
+      </marker>
 
-    <linearGradient id="gradNutrition" x1="0" x2="1">
-      <stop offset="0%" stop-color="#FFF3E6"/>
-      <stop offset="100%" stop-color="#FFE6C7"/>
-    </linearGradient>
+      <!-- Shadow -->
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#94A3B8" flood-opacity="0.18"/>
+      </filter>
 
-    <linearGradient id="gradMicrobiome" x1="0" x2="1">
-      <stop offset="0%" stop-color="#E7FBF5"/>
-      <stop offset="100%" stop-color="#CFF3E8"/>
-    </linearGradient>
+      <!-- Flowing arrow animation -->
+      <style>
+        .flow-arrow {
+          stroke-dasharray: 8 16;
+          animation: flow 1s linear infinite;
+        }
+        @keyframes flow {
+          to { stroke-dashoffset: -24; }
+        }
+      </style>
+    </defs>
 
-    <linearGradient id="gradGenomics" x1="0" x2="1">
-      <stop offset="0%" stop-color="#F0ECFF"/>
-      <stop offset="100%" stop-color="#E2DAFF"/>
-    </linearGradient>
+    <!-- FLOWING ARROWS -->
+    <path class="flow-arrow" d="M170 85 C240 110, 250 130, 280 155" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+    <path class="flow-arrow" d="M170 280 C240 255, 250 235, 280 210" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+    <path class="flow-arrow" d="M365 180 C430 180, 445 105, 500 90" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+    <path class="flow-arrow" d="M365 180 C430 180, 445 180, 500 180" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+    <path class="flow-arrow" d="M365 180 C430 180, 445 255, 500 270" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+    <path class="flow-arrow" d="M320 42 C320 68, 320 105, 320 145" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
 
-    <linearGradient id="gradDisease" x1="0" x2="1">
-      <stop offset="0%" stop-color="#FFECEE"/>
-      <stop offset="100%" stop-color="#FFDADF"/>
-    </linearGradient>
+    <!-- Maternal Immunity -->
+    <g filter="url(#softShadow)">
+      <rect x="35" y="45" rx="18" ry="18" width="145" height="78" fill="url(#gradImmunity)" stroke="#C7D7F7"/>
+      <text x="37" y="60" font-size="14" font-weight="700" fill="#1E3A5F">Maternal Immunity</text>
+      <text x="37" y="78" font-size="12.5" fill="#425466">
+        <tspan x="37" dy="0">Antibodies and</tspan>
+        <tspan x="37" dy="15">immune transfer</tspan>
+      </text>
+    </g>
 
-    <linearGradient id="gradCenter" x1="0" x2="1">
-      <stop offset="0%" stop-color="#F7FAFC"/>
-      <stop offset="100%" stop-color="#EDF2F7"/>
-    </linearGradient>
+    <!-- Nutrition -->
+    <g filter="url(#softShadow)">
+      <rect x="35" y="240" rx="18" ry="18" width="145" height="78" fill="url(#gradNutrition)" stroke="#F2D0A7"/>
+      <text x="37" y="255" font-size="14" font-weight="700" fill="#8A3B12">Nutrition</text>
+      <text x="37" y="273" font-size="12.5" fill="#7B4A2F">
+        <tspan x="37" dy="0">Diet and early-life</tspan>
+        <tspan x="37" dy="15">metabolic signals</tspan>
+      </text>
+    </g>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#6B7280"></polygon>
-    </marker>
+    <!-- Early-Life Host with Newborn Baby -->
+    <g filter="url(#softShadow)">
+      <ellipse cx="320" cy="182" rx="92" ry="72" fill="url(#gradCenter)" stroke="#D6E4F0" stroke-width="1.5"/>
+      <g id="newborn">
+        <circle cx="320" cy="168" r="14" fill="#FFDEB4"/>
+        <ellipse cx="320" cy="188" rx="12" ry="18" fill="#FFDEB4"/>
+        <path d="M308 180 Q320 200 332 180" fill="#FBBF24" opacity="0.4"/>
+        <circle cx="316" cy="166" r="1.5" fill="#6B7280"/>
+        <circle cx="324" cy="166" r="1.5" fill="#6B7280"/>
+        <path d="M316 172 Q320 174 324 172" stroke="#6B7280" stroke-width="1" fill="none"/>
+      </g>
+      <text x="320" y="205" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Early-Life Host</text>
+    </g>
 
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#94A3B8" flood-opacity="0.18"/>
-    </filter>
-  </defs>
+    <!-- Immune Development -->
+    <g filter="url(#softShadow)">
+      <rect x="500" y="140" rx="18" ry="18" width="110" height="100" fill="#EFF6FF" stroke="#CFE0F6"/>
+      <text x="555" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">
+        <tspan x="555" dy="0">Immune</tspan>
+        <tspan x="555" dy="22">Development</tspan>
+      </text>
+      <text x="555" y="200" text-anchor="middle" font-size="12.5" fill="#4A5568">
+        <tspan x="555" dy="0">Barrier &</tspan>
+        <tspan x="555" dy="18">Signaling</tspan>
+      </text>
+    </g>
 
-  <path d="M170 85 C240 110, 250 130, 280 155" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
-  <path d="M170 280 C240 255, 250 235, 280 210" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
-  <path d="M365 180 C430 180, 445 105, 500 90" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
-  <path d="M365 180 C430 180, 445 180, 500 180" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
-  <path d="M365 180 C430 180, 445 255, 500 270" fill="none" stroke="#6B7280" stroke-width="2.2" marker-end="url(#arrowhead)"/>
+    <!-- Microbiome -->
+    <g filter="url(#softShadow)">
+      <rect x="500" y="48" rx="18" ry="18" width="110" height="78" fill="url(#gradMicrobiome)" stroke="#B8E7D6"/>
+      <text x="555" y="70" text-anchor="middle" font-size="14" font-weight="700" fill="#065F46">Microbiome</text>
+      <text x="555" y="90" text-anchor="middle" font-size="12.5" fill="#426B5E">
+        <tspan x="555" dy="0">Colonization</tspan>
+        <tspan x="555" dy="15">& Ecology</tspan>
+      </text>
+    </g>
 
-  <g filter="url(#softShadow)">
-    <rect x="35" y="45" rx="18" ry="18" width="145" height="78" fill="url(#gradImmunity)" stroke="#C7D7F7"/>
-    <circle cx="68" cy="84" r="16" fill="#2B6CB0" opacity="0.12"/>
-    <path d="M68 71 L74 84 L68 97 L62 84 Z" fill="none" stroke="#2B6CB0" stroke-width="2"/>
-    <text x="95" y="78" font-size="14" font-weight="700" fill="#1E3A5F">Maternal Immunity</text>
-    <text x="95" y="97" font-size="12.5" fill="#425466">Antibodies and</text>
-    <text x="95" y="113" font-size="12.5" fill="#425466">immune transfer</text>
-  </g>
+    <!-- Functional Genomics -->
+    <g filter="url(#softShadow)">
+      <rect x="255" y="20" rx="14" ry="14" width="130" height="56" fill="url(#gradGenomics)" stroke="#D8D0F8"/>
+      <text x="320" y="32" text-anchor="middle" font-size="13.5" font-weight="700" fill="#553C9A">
+        <tspan x="320" dy="0">Functional</tspan>
+        <tspan x="320" dy="16">Genomics</tspan>
+      </text>
+    </g>
 
-  <g filter="url(#softShadow)">
-    <rect x="35" y="240" rx="18" ry="18" width="145" height="78" fill="url(#gradNutrition)" stroke="#F2D0A7"/>
-    <circle cx="68" cy="279" r="16" fill="#DD6B20" opacity="0.12"/>
-    <path d="M64 287 C64 277, 72 277, 72 268 C78 272, 79 282, 73 288 C70 291, 66 291, 64 287 Z" fill="none" stroke="#C05621" stroke-width="2"/>
-    <text x="95" y="272" font-size="14" font-weight="700" fill="#8A3B12">Nutrition</text>
-    <text x="95" y="291" font-size="12.5" fill="#7B4A2F">Diet and early-life</text>
-    <text x="95" y="307" font-size="12.5" fill="#7B4A2F">metabolic signals</text>
-  </g>
-
-  <g filter="url(#softShadow)">
-    <ellipse cx="320" cy="182" rx="92" ry="72" fill="url(#gradCenter)" stroke="#D6E4F0" stroke-width="1.5"/>
-    <circle cx="320" cy="155" r="16" fill="#FFD6E7" stroke="#E8AFC4"/>
-    <path d="M320 171 L320 208" stroke="#A0AEC0" stroke-width="2.2" stroke-linecap="round"/>
-    <path d="M301 193 C310 185, 330 185, 339 193" fill="none" stroke="#A0AEC0" stroke-width="2.2" stroke-linecap="round"/>
-    <path d="M307 214 C312 205, 328 205, 333 214" fill="none" stroke="#A0AEC0" stroke-width="2.2" stroke-linecap="round"/>
-    <text x="320" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Early-Life Host</text>
-    <text x="320" y="257" text-anchor="middle" font-size="12.5" fill="#4A5568">Mucosal immunity and</text>
-    <text x="320" y="273" text-anchor="middle" font-size="12.5" fill="#4A5568">developmental susceptibility</text>
-  </g>
-
-  <g filter="url(#softShadow)">
-    <rect x="500" y="48" rx="18" ry="18" width="110" height="78" fill="url(#gradMicrobiome)" stroke="#B8E7D6"/>
-    <circle cx="528" cy="87" r="4.5" fill="#059669"/>
-    <circle cx="541" cy="75" r="4" fill="#10B981"/>
-    <circle cx="544" cy="95" r="3.8" fill="#34D399"/>
-    <circle cx="556" cy="84" r="4.8" fill="#047857"/>
-    <circle cx="567" cy="95" r="3.8" fill="#10B981"/>
-    <text x="556" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#065F46">Microbiome</text>
-    <text x="556" y="112" text-anchor="middle" font-size="12.5" fill="#426B5E">Colonization and ecology</text>
-  </g>
-
-  <g filter="url(#softShadow)">
-    <rect x="500" y="140" rx="18" ry="18" width="110" height="78" fill="#EFF6FF" stroke="#CFE0F6"/>
-    <circle cx="530" cy="180" r="16" fill="#2B6CB0" opacity="0.10"/>
-    <path d="M522 180 L528 186 L539 172" fill="none" stroke="#2B6CB0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="556" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Immune</text>
-    <text x="556" y="191" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Development</text>
-    <text x="556" y="211" text-anchor="middle" font-size="12.5" fill="#4A5568">Barrier and signaling</text>
-  </g>
-
-  <g filter="url(#softShadow)">
-    <rect x="500" y="232" rx="18" ry="18" width="110" height="78" fill="url(#gradDisease)" stroke="#F4C7D0"/>
-    <circle cx="528" cy="271" r="16" fill="#C53030" opacity="0.10"/>
-    <path d="M523 266 L533 276 M533 266 L523 276" stroke="#C53030" stroke-width="2.2" stroke-linecap="round"/>
-    <text x="556" y="267" text-anchor="middle" font-size="14" font-weight="700" fill="#9B2C2C">Infection Risk</text>
-    <text x="556" y="298" text-anchor="middle" font-size="12.5" fill="#7A4049">Neonatal susceptibility</text>
-  </g>
-
-  <g filter="url(#softShadow)">
-    <rect x="255" y="20" rx="14" ry="14" width="130" height="56" fill="url(#gradGenomics)" stroke="#D8D0F8"/>
-    <path d="M282 34 C288 28, 295 28, 301 34 C307 40, 314 40, 320 34" fill="none" stroke="#6B46C1" stroke-width="2"/>
-    <path d="M282 62 C288 56, 295 56, 301 62 C307 68, 314 68, 320 62" fill="none" stroke="#6B46C1" stroke-width="2"/>
-    <path d="M282 34 L282 62 M320 34 L320 62" stroke="#6B46C1" stroke-width="2"/>
-    <text x="344" y="42" font-size="13.5" font-weight="700" fill="#553C9A">Functional</text>
-    <text x="344" y="59" font-size="13.5" font-weight="700" fill="#553C9A">Genomics</text>
-  </g>
-
-  <path d="M320 76 C320 92, 320 102, 320 109" fill="none" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-</svg>
+    <!-- Infection Risk -->
+    <g filter="url(#softShadow)">
+      <rect x="500" y="260" rx="18" ry="18" width="110" height="78" fill="url(#gradDisease)" stroke="#F4C7D0"/>
+      <text x="555" y="286" text-anchor="middle" font-size="14" font-weight="700" fill="#9B2C2C">Infection Risk</text>
+      <text x="555" y="306" text-anchor="middle" font-size="12.5" fill="#7A4049">
+        <tspan x="555" dy="0">Neonatal</tspan>
+        <tspan x="555" dy="15">susceptibility</tspan>
+      </text>
+    </g>
+  </svg>
 
 </div>
 
